@@ -1,0 +1,548 @@
+\documentclass[cca-page,%  design nach vorschrift
+paper=a4,
+fromphone=on,% tel etc. setzen
+foldmarks=on,% Faltmarken setzen
+draft=false,%     Entwurfsmodus
+fontsize=10pt% Größe der Grundschrift
+]{scrlttr2}
+
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+
+\newcommand*{\signed}[1]%
+{\unskip\hspace*{1em plus 1fill}%
+\nolinebreak[3]\hspace*{\fill}\mbox{\emph{#1}}}
+
+\begin{document}
+
+\fromlogo{logos/colorlogo_rgb}% Logo bei Normaldruck.
+%\fromlogo{logos/colorlogo_cmyk}% Logo bei Profidruck.
+\setkomavar{fromname}{Contao-Community-Alliance}% Name
+\setkomavar{fromaddress}{The Internet}% Postalische Adresse
+%\setkomavar{fromtel}{+49 (07121) 964 98 65}% Telefonnummer
+%\setkomavar{fromfax}{+49 (07121) 964 98 66}% Faxnummer
+\frommail{info@c-c-a.org}% Mailadresse
+\fromweb{http://c-c-a.org}% Webseite
+\setkomavar{signature}{Die Contao Community Alliance}% Der Name der Unterzeichner
+\setkomavar{shortdate}{18.02.2014}% falls das Datum konstant sein soll.
+\setkomavar{date}{Reutlingen, 18. Feb 2014}
+%\setkomavar{specialmail}{Hauspost}% oder Einschreiben etc.
+%\setkomavar{myref}{}% Mein Zeichen
+%\setkomavar{yourmail}{}% Ihr Schreiben
+%\setkomavar{yourref}{}% Ihr Zeichen
+
+\begin{letter}{
+Contao Association \\
+Sonnhalderain 15 \\
+CH - 3250 Lyss
+}
+
+\opening{Antrag auf Förderung des Contao Composer Projekt \\
+durch die Contao Association}
+
+Text Text Text Text Text Text Text Text Text Text Text 
+Text Text Text Text Text Text Text Text Text Text Text 
+Text Text Text Text Text Text Text Text Text Text Text 
+
+\closing{Mit freundlichen Grüßen,}
+
+% --------------------------------------------------------------------------------
+%
+%     Präambel
+%
+% --------------------------------------------------------------------------------
+
+\newpage
+
+\section{Präambel}
+
+Gefördert werden soll das Contao Composer Projekt, das durch die CCA betreut wird.
+
+Das Projekt besteht aus mehreren Teilprojekten:
+
+\begin{itemize}
+\item ...dem Contao Composer Client (nachfolgend CCC benannt), \\
+dieser stellt die Integration von Composer in das Contao Backend zur Verfügung.
+\item ...dem Contao Composer Plugin (nachfolgend CCP benannt), \\
+dieser stellt in Composer die Funktion zur Verfügung, Contao Erweiterungen über Composer zu installieren.
+\item ...dem Contao Composer Repository (nachfolgend CCR benannt), \\
+dies ist ein an das Contao Ökosystem angepasster Paketserver auf Basis von Packagist.
+\item ...dem Composer.json Generator (nachfolgend CJG benannt), \\
+hierbei handelt es sich um ein Web-Tool, dass den Entwicklern den Umstieg zu Composer erleichtern soll.
+\item ...der Contao Composer Dokumentation (nachfolgend CCD benannt).
+\end{itemize}
+
+Außerdem umfasst der Antrag folgende weitere Projekte, die unmittelbar mit dem Contao Composer Projekt zusammen hängen oder sogar als ''Nebenprodukt`` entstanden sind oder entstehen sollen.
+
+\begin{itemize}
+\item Database Update Tool (nachfolgend DUT benannt), \\
+ein eigenständiges Tool um das Datenbankupdate durchzuführen. In Contao ist das Datenbankupdate an das Install-Tool oder die Paketverwaltung gebunden. Das DUT soll das Datenbankupdate als eigenständige Komponente anbieten. Sowohl im Backend, als auch im CCC, so wie auf der Konsole!
+\item Migration Tool (nachfolgend MT benannt),
+ist ein Tool, inspiriert von Doctrine Migrations\footnotemark{http://www.doctrine-project.org/projects/migrations.html}, allerdings ist es allgemeiner gehalten und soll als Ersatz für die unspezifizierte \texttt{runone.php} dienen um in Zukunft fehlerhafte oder inkomplette Datenupgrades zu verhindern (bislang hat nur der Core eine “richtige” Datenmigration vornehmen können).
+\end{itemize}
+
+\subsection{Welches Ziel hat dieser Antrag?}
+
+Bereits Anfang 2014\footnote{https://contao.org/de/news/zwischenmeldung-zum-extension-repository-3.html} haben wir in einem klärenden Gespräch festgestellt, dass das CCC zwar schon funktioniert, aber es vor allem am Ökosystem hapert. Das vorhandene Ökosystem rund um das ER2 ist deutlich umfangreicher als das, was wir um den CCC bisher aufbauen konnten.
+
+Dieser Antrag befasst sich - soweit es aktuell planbar ist - damit, das Ökosystem rund um den CCC aufzubauen, so dass wir in absehbarer Zeit - 2015/2016 - das alte ER2 auch tatsächlich ablösen können.
+
+Vor allem die “mangelnde” Usability, die in den Kommentaren des Newsbeitrags vom 20. März 2014 so oft angesprochen wurde möchten wir “aus dem Weg schaffen”. 
+
+% --------------------------------------------------------------------------------
+%
+%     tl;dr - Zusammenfassung
+%
+% --------------------------------------------------------------------------------
+
+\newpage
+
+\section{tl;dr\footnote{Too long; didn’t read\\
+http://en.wikipedia.org/wiki/Wikipedia:Too\_long;\_didn't\_read} - Zusammenfassung}
+
+\textit{Der Antrag ist dir zu lang? Hier findest du eine Zusammenfassung!}
+
+Wie im Präambel beschrieben umfasst der Antrag das gesamte Contao Composer Projekt. Nicht nur aktuelle, auch kurzfristige, sowie mittelfristige und langfristige Ziele.
+
+Der Antrag verfolgt dabei 2 Ziele:
+Erstens wollen wir die Kritiken aufgreifen und die Bedienbarkeit verbessern. Dies soll zum einen durch Verbesserung der Oberfläche, zum anderen durch bereitstellen einer Dokumentation geschehen.
+Zweitens wollen wir das Ökosystem aufbauen, dass das aktuelle ER2 zur Zeit bietet, so dass wir im Zeitrahmen 2015/2016 ernsthaft darüber reden können, alte ER2 abzulösen. An dieser Stelle erst mal Entwarnung: Das ER2 wird uns noch einige Jahre erhalten bleiben um älteren Contao Installationen nicht “den Stecker zu ziehen”.
+
+Composer ist nicht ganz unumstritten, da es teilweise sehr Ressourcenhungrig ist. Allerdings stehen uns kaum Alternativen zur Verfügung. Native Paketverwaltungen wie PEAR/PECL fallen auf Shared Hostings weg. Da Composer rein in PHP geschrieben ist, lässt es sich auf nahezu allen PHP Plattformen betreiben. Man muss auch sagen dass sich Composer in den vergangenen 2 Jahren sehr gut weiterentwickelt hat und deutlich verbessert wurde. Die Systemanforderungen sind gesunken und die Performance gestiegen. Wir setzen hier auf die Erfahrung und Arbeit von etwa 10 Entwicklern die regelmäßig zu Composer beitragen. Und über 100 weiteren Entwicklern die hier und da was zum Composer beitragen\footnote{https://github.com/composer/composer/graphs/contributors}.
+
+Wir sind nicht die einzigen die auf den “Composer Zug” aufspringen. Drupal, Typo3 NEOS, Laravel, Yii, Doctrine, Symfony und zahllose weitere Projekte nutzen Composer. Es gibt bereits über 40.000 Pakete auf packagist.org zu finden! Diese große Verbreitung wird auch die Shared Hoster dazu zwingen Composer zukünftig besser zu unterstützen.
+
+Der Umfang des Antrags würde würde das Jahresbudget der Association deutlich sprengen. Deshalb wird dieser Antrag in “Entwicklungspakete” aufgesplittet, die dann zur Förderung eingereicht werden oder durch andere Unternehmen gefördert werden können.
+Für die Community ist die Gesamtheit des Antrags aber immer noch ein Leitfaden, was alles noch folgen wird.
+Dabei sollte jedoch beachtet werden, dass der Antrag nicht starr ist. Einige mittel- und langfristige Positionen sind noch nicht vollständig ausgearbeitet und geplant und das ist auch beabsichtigt. Die weiterführenden Positionen wollen wir in Zusammenarbeit mit der Community ausarbeiten und planen.
+
+Dabei helfen uns die “Entwicklungspakete” die zeitgleich zu einem agilen Entwicklungsmodel führen. Nach jedem Entwicklungsschritt können wir ein Resümee ziehen und gemeinsam die nächste Stufe planen.
+
+% --------------------------------------------------------------------------------
+%
+%     Warum Composer? Was ist aus dem ER3 geworden?
+%
+% --------------------------------------------------------------------------------
+
+\newpage
+
+\section{Warum Composer? Was ist aus dem ER3 geworden?}
+
+\subsection{Was ist Composer?}
+
+\begin{quotation}
+Mit Composer\footnote{https://getcomposer.org/} lassen sich Pakete und Abhängigkeiten in PHP Software verwalten. Das Composer Projekt wurde Anfang 2011 von Nils Adermann und Jordi Boggiano initiiert und erfreut sich seit 2012 wachsender Beliebtheit und Verbreitung. Abgesehen von PEAR\footnote{http://pear.php.net/}, welches nativ auf dem System ausgeführt wird, gab es für PHP über die letzten Jahre hinweg keine vernünftige Paketverwaltung. Composer ist vollständig in PHP geschrieben und lässt sich daher im Gegensatz zu PEAR auch auf restriktiven Systemen (Shared Hoster) verwenden. Zum Composer-Ökosystem gehört unter anderem Packagist\footnote{https://packagist.org/}, das als primäres Repository für Pakete dient.
+\signed{Contao Community Alliance}
+\end{quotation}
+
+\subsection{Darum Composer}
+
+Mit dem CCC+CCP setzen wir auf die beliebte und stark verbreitete “Composer” Erweiterung. Wir haben uns bewusst dazu entschieden, auf eine starke Basis aufzusetzen und nicht wie in der Vergangenheit die Erweiterungsverwaltung vollständig selber aufzubauen.
+
+\begin{quotation}
+Mit dem CCC+CCP setzen wir auf die beliebte und stark verbreitete “Composer” Erweiterung. Wir haben uns bewusst dazu entschieden, auf eine starke Basis aufzusetzen und nicht wie in der Vergangenheit die Erweiterungsverwaltung vollständig selber aufzubauen. \\
+\signed{Christian Schiffler, Tristan Lins}
+\end{quotation}
+
+Hinzu kommt, dass der Code des ER2 Servers aufgrund von Lizenzgründen nicht veröffentlicht werden darf, was die Weiterentwicklung in Zusammenarbeit mit der Community unmöglich macht. 
+
+\subsection{Composer Integration? Gibt es doch schon!}
+
+Richtig. Die Integration von Composer in Contao wurde Anfang 2013 von Dominik Zogg und Tristan Lins initiiert. Mittlerweile wurde aus einer einfachen Integration auf Konsolenbasis ein umfangreicher Client mit Integration in das Contao Backend. Um den Composer Client entwickelt sich seit kurzem ein entsprechendes Ökosystem. Für den vereinfachten Übergang des alten ER2 betreibt die CCA ein Repository, über das die alten Legacy Pakete mit Composer installiert werden können.
+
+Schon heute wird der CCC in immer mehr Installationen eingesetzt (> 15.000 Downloads). Das hier technisch weniger versierte Anwender oft nicht gut mit zurecht kommen, liegt auch daran das die aktuelle Integration noch aus der Feder “von Entwicklern für Entwickler” stammt und viele Punkte für einen gute Nutzer-Integration bisher aus Zeitmangel nicht umgesetzt werden konnten.
+
+% --------------------------------------------------------------------------------
+%
+%     Vorteile für Nutzer
+%
+% --------------------------------------------------------------------------------
+
+\newpage
+
+\section{Vorteile für Nutzer}
+
+\textit{Ein schlanker Core und hochwertige/umfangreiche Erweiterungen}, dafür steht Contao seit 2006. Um die Bereitstellung des Erweiterungskatalogs kümmert sich seit geraumer Zeit das so genannte “Extension Repository 2”. Ein in die Jahre gekommener Dienst, der heutige Anforderungen an eine Erweiterungsverwaltung nicht mehr erfüllt. So werden aktuell Abhängigkeiten nicht richtig aufgelöst oder es lassen sich inkompatible Erweiterungen installieren.
+
+Die Schwächen des aktuellen Composer Client Plugins für die Nutzer sind uns bewusst, mit Hilfe dieses Antrags wollen wir neben dem “Unterbau” vor allem die Übersichtlichkeit beim finden, installieren und verwalten von Erweiterungen deutlich verbessern.
+
+Durch die veraltete und unzureichende Implementierung der Abhängigkeitsverwaltung im ER2 ist es aktuell möglich, wenn nicht gar wahrscheinlich, dass sich Nutzer inkompatible Erweiterungen installieren und somit potentiell die Installation lahm legen (gelbe Box). Diese Probleme werden durch Composer weitestgehend vermieden, so lange die Entwickler selbst keinen Mist bauen. Und sollte das Backend doch einmal nicht mehr nutzbar sein, kann man mit Hilfe des Standalone Modus die defekte Erweiterung auch wieder entfernen und das Backend “wiederbeleben”. Mit dem ER2 ist dies aktuell nicht möglich.
+
+Als Nutzer bekommt man das aktuell eher selten zu spüren. Für die Erweiterungsentwickler bedeutet dies oft zahlreiche extra Stunden um zu verhindern, das nach einem einfachen Update von Erweiterungen hunderte von Contao Seiten nicht mehr funktionieren. Trotzdem kommt das immer wieder vor, was unter anderem an der schlechten Abhängigkeitsverwaltung des ER2 liegt.
+
+Auch das Einstellen und die Pflege der Erweiterungen im ER2 ist für die Entwickler äußerst zeitaufwendig. Was in den vergangenen Monaten auch dazu geführt hat das immer mehr Entwickler nach und nach ihre Erweiterungen - aus Zeitmangel - erst gar nicht mehr im ER2 pflegen können, sondern nur noch via Composer verteilen. Durch die Einführung von Composer kommen Nutzer somit zeitnah in den Genuss von Updates, da der Aufwand für Entwickler ungleich geringer ist.
+
+Mit dem Composer wird es für den Nutzer nicht nur einfacher, sondern vor allem sicherer werden seine Contao-Installation aktuell und stabil zu halten.
+
+\textbf{Vorteile}
+\begin{itemize}
+\item Schneller Updates erhalten
+\item Zukunftssicher
+\item Keine Abhängigkeitskonflikte zwischen Erweiterungen
+\item Einhörner mit Feenstaub
+\end{itemize}
+
+% --------------------------------------------------------------------------------
+%
+%     Vorteile für Entwickler
+%
+% --------------------------------------------------------------------------------
+
+\newpage
+
+\section{Vorteile für Entwickler}
+
+Einer der größten Schwächen des ER2 besteht in der schlechten Auflösung von Abhängigkeiten zwischen Erweiterungen. Dies beherrscht Composer perfekt. Composer bietet eine große Community, viele “Best-Practices” und neue Versionen können ohne zusätzlichen Aufwand wie bisher beim ER2 bereitgestellt werden.
+
+Mittels Composer können die Erweiterungen dort belassen werden, wo sie heutzutage eh meist schon sind: Auf github, bitbucket oder einem anderen Anbieter. Einzige Bedingung dabei ist, dass der Quellcode öffentlich erreichbar sind\footnote{Für Anbieter kommerzieller Erweiterungen gibt es die Möglichkeit - über private Satis Repositories und Artifact Pakete - den eigenen Code vor fremden Zugriffen zu schützen und trotzdem die Erweiterung über Composer zu verteilen. Diese Möglichkeiten werden im Rahmen der Dokumentation genau erklärt.}.
+Es steht auch jedem Entwickler frei, seinen eigenen (privaten) Repository Server zu betreiben oder gänzlich ohne Git zu arbeiten und lediglich zip Downloads bereit zu stellen.
+
+Im Gegensatz zum ER2, wo jede Version einzeln von Hand auf dem Server gepflegt werden muss, reicht bei Composer ein einmaliges Registrieren auf dem Paketserver (bspw. packagist.org). Neue Versionen werden ausschließlich durch setzen von Tags im VCS System erzeugt. Da für gewöhnlich diese Tags ohnehin gesetzt werden, fällt die ganze Verwaltung der Versionen auf dem Paketserver weg. Man kann also mit Recht behaupten: Es fällt Arbeit weg und kommt keine neue Arbeit hinzu, um die einzelnen Versionen zu verwalten!
+
+Ein weiterer, wesentlicher Vorteil ist der Zugriff auf andere nicht-Contao Pakete und Bibliotheken. Damit ist es möglich direkt auf Dritt-Software und Bibliotheken (bspw. die Symfony2 Komponenten) zurück zu greifen, ohne diese ständig selbst mitliefern zu müssen, was im ER2 aktuell notwendig ist. Das führt auch zu Komplikationen, wenn 2 Erweiterungen im ER2 die gleiche Drittanbieter Software, aber in unterschiedlichen Versionen verwenden möchten. Composer würde einen solchen Konflikt erkennen und die gleichzeitige Installation verweigern. Bei einem ER2 Paket würde es zu einem Fehlverhalten der Erweiterung führen.
+
+\textbf{Vorteile}
+\begin{itemize}
+\item Großes Öko-System
+\item Dritt Erweiterungen und Bibliotheken in eigenen verwenden
+\item Zukunftssicher dank umfangreicher Community
+\item Abhängigkeitskonflikte zwischen Erweiterungen werden zuverlässig erkannt und vermieden.
+\item Einhörner ohne Feenstaub
+\end{itemize}
+
+% --------------------------------------------------------------------------------
+%
+%     Antragsteller
+%
+% --------------------------------------------------------------------------------
+
+\newpage
+
+\section{Antragsteller}
+
+\subsection{Christian "xtra" Schiffler}
+
+Primärer Maintainer des CCP \\
+Unternehmen: CyberSpectrum (http://www.cyberspectrum.de) \\
+E-Mail: c.schiffler@cyberspectrum.de
+
+\subsection{Tristan "tril" Lins}
+
+Primärer Maintainer des CCC \\
+Unternehmen: bit3 UG (https://bit3.de) \\
+E-Mail: tristan.lins@bit3.de
+
+% --------------------------------------------------------------------------------
+%
+%     Unterstützer
+%
+% --------------------------------------------------------------------------------
+
+\newpage
+
+\section{Unterstützer}
+
+\subsection{Tim "timbec" Becker, tim@westwerk.ac}
+
+\emph{Mitglied in der Contao Association und Contao Community Alliance}
+
+Im Internet, Das “Contao Composer Ökosystem” ist die logische Weiterentwicklung des beliebten ER2 - um die aktuell vorhandenen Defizite auszumerzen und den Composer auf noch stabilere Beine zu stellen unterstütze ich die forcierte Weiterentwicklung natürlich.
+
+\subsection{Kim "k-webdesign" Wormer, info@kim-wormer.de}
+
+\emph{Mitglied in der Contao Association}
+
+Mit Composer hat man einen weitaus besseren Überblick über die Abhängigkeiten der einzelnen Erweiterungen
+
+\subsection{Kirsten "katgirl" Roschanski, kirsten@kirsten-roschanski.de}
+
+\emph{Mitglied in der Contao Association}
+
+Über Composer kann man einfacher neue Versionen, von Entwicklern, beziehen.  Zudem kommt es durch Composer nicht länger zu Versionkonflikten.
+
+\subsection{Marc "MacKP" Reimann, reimann@mediendepot-ruhr.de}
+
+\emph{kein Mitglied in der Contao Association}
+
+Composer macht es mir wesentlich einfacher komplexe Erweiterungen zu installieren und aktuell zu halten. Auf lange Sicht ist das genau die richtige Entwicklung: Weg von Closed Source (ER 2) zu einem Open Source Projekt, was aktiv von vielen weiter entwickelt werden kann.
+
+\subsection{Carolina "Lucina" Koehn, ck@kikmedia.de}
+
+\emph{kein Mitglied in der Contao Association}
+
+Composer ist der notwendige nächste Schritt für Contao, um komplexe Szenarien abbilden zu können: Ein funktionierendes, modernes  Paketmanagement, um weitreichende Softwareabhängigkeiten sicher zu warten, Erweiterungen einfach zu installieren, Contao für externe Bibliotheken zu öffnen und damit in der Liga moderner Software mitzuspielen. Composer macht Contao nachhaltig und zukunftsfähig.
+
+\subsection{Leo "leo" Feyer, leo@contao.org}
+
+\emph{kein Mitglied der Contao Association}
+
+Das ER2 hat gravierende Mängel bei der Abhängigkeitsverwaltung und muss dringend zeitnah ersetzt werden. Die Composer-basierte Erweiterungsverwaltung ist derzeit die einzige Alternative zum ER2, die mit vertretbarem Aufwand produktionsreif werden kann. Die Integration von Standards wie GitHub, Packagist und Composer ist außerdem der beste Ansatz, so dass ich nicht glaube, dass sich noch weitere Alternativen etablieren werden.
+
+% --------------------------------------------------------------------------------
+%
+%     Beschreibung
+%
+% --------------------------------------------------------------------------------
+
+\newpage
+
+\section{Beschreibung}
+
+\subsection{Zielsetzung}
+
+Aktuell ist die Bedienbarkeit des CCC vor allem technisch orientiert. Ziel ist es die Bedienbarkeit dahingehend deutlich zu verbessern, dass technisch wenig versierte Benutzer keine Probleme mehr haben sollten, den CCC zu bedienen (Usability).
+
+Der CCC ist momentan vom Contao Backend abhängig, was vor allem bei einem fehlgeschlagenen Update oft zu Problemen führt, weil man nicht mehr in der Lage ist die Paketverwaltung zu öffnen. Es soll “zusätzlich” zu der Backend Integration einen eigenständigen Modus geben, der auch ohne das Backend funktioniert und mit dem man ein beschädigtes System wieder reparieren kann. Dieser Standalone-Modus wird - ähnlich wie das Contao-Live-Update - über eine PHAR Datei realisiert.
+
+Das CCP beinhaltet aktuell Funktionalitäten, die dort einfach nicht rein gehören. Dazu gehören unter anderem die Migrationsroutinen bei Updates. Diese Funktionen sollen in den CCC einfließen und der CCP soll damit so verschlankt werden, dass er auch für zukünftige Contao Versionen ist. Das betrifft bspw. die anstehende Contao 4 Version, in der sich die Strukturen ändern und dort einige der Migrationsroutinen aktuell noch zu Fehlern führen.
+
+Das CCR in Form einer eigenständigen Packagist Installation soll aufgesetzt und für Contao gebrandet werden. Damit wollen wir verhindern, dass Entwickler die jetzt auf Composer umsteigen, nicht noch einen zweiten Umstieg von Packagist.org auf den neuen Contao Paketserver durchfürhen müssen. In der ersten Form wird der CCR lediglich ein Standard Packagist Server sein. Für 2015 ist ein Förderantrag zur Erweiterung dieses Paketservers geplant, um ihn an die Anforderungen im Contao Umfeld anzupassen.
+
+Die CCD soll sowohl für Entwickler, als auch Anwender und Anbieter kommerzieller Pakete ausgearbeitet werden. Momentan ist die Dokumentation auch noch über viele Quellen verteilt (CCA Website, Contao Wiki, Github Wiki) und soll zentralisiert werden. Die Dokumentation wird in reStructuredText/Sphinx\footnote{http://sphinx-doc.org/} geschrieben und über Read the Docs\footnote{https://readthedocs.org/} publiziert. Die Übersetzung erfolgt dann über Transifex\footnote{https://www.transifex.com/}.
+Mit der CCD wurde bereits begonnen, man kann diese unter contao-composer-project.rtfd.org\footnote{http://contao-composer-project.rtfd.org} einsehen.
+
+\subsection{Langfristige Ziele und Aufgaben}
+
+Die Entwicklungen umfasst nicht nur die nächsten Schritte. In den kommenden Jahren wollen wir weitere Projekte angehen, um das Ökosystem rund um die Contao Paketverwaltung neu aufzubauen.
+
+\subsubsection{Einführung eines erweiterten Packagist Servers für Contao Erweiterungen (=CCR)}
+
+Packagist\footnote{https://packagist.org} ist der Paketserver zu Composer. Allerdings sind die Möglichkeiten im Vergleich zum aktuellen ER2\footnote{https://contao.org/de/extension-list.html} doch sehr eingeschränkt. Bspw. die Suche und Filtermöglichkeiten sind momentan noch nicht sonderlich ausgereift. Im Rahmen des CCR möchten wir einen eigenen Paketserver auf Basis von Packagist aufsetzen, diesen entsprechend Branden und auf unsere Bedürfnisse anpassen.
+
+Dabei werden wir auch darauf achten, dass wir uns nicht zu sehr von der Originalsoftware entfernen und werden einige Änderungen auch an das Packagist Projekt zurück geben. Daraus erhoffen wir uns einen stärkeren Synergieeffekt. Änderungen die speziell an das Contao Umfeld zugeschnitten werden, verbleiben im CCR und werden nicht an das Packagist Projekt zurück gegeben.
+
+\subsubsection{Erweitern des CCR in einen ''App Store``}
+
+Mit dem aktuellen ER2 ist es möglich kommerzielle Erweiterung zu verbreiten. Allerdings fehlt es an entsprechenden Vermarktungsmöglichkeiten. Diese möchten wir - so ähnlich wie der Contao Theme Store - zukünftig ermöglichen.
+
+\subsubsection{Langfristige Finanzierung}
+
+\paragraph{Serverbetrieb und Administration des CCR}
+Das CCR wird auf dem Community Server der Association betrieben. Falls es auf Dauer notwendig werden sollte, wird die Association einen separaten Server zur Verfügung stellen. Dies ist bereits mit dem Association Vorstand kommuniziert worden.
+Die Pflege des Servers wird primär von den Serveradministratoren durchgeführt. Die spezifische Administration der Software wird unentgeltlich von Tristan Lins und Christian Schiffler übernommen, solange sich der Aufwand in einem wirtschaftlichen akzeptablen Rahmen bewegt.
+
+\paragraph{Weiterentwicklung und Pflege des CCC+CCP}
+Für die nächsten Jahre soll die Weiterentwicklung und Pflege primär durch die Contao Association im Rahmen dieses Antrags gefördert werden. Wie die finanzielle Absicherung danach aussieht steht noch nicht genau fest. Bereits bei der Association Mitgliederversammlung 2014 waren in dem Haushalt Gelder für das Composer Projekt eingeplant gewesen. Das nach Umsetzung dieses Antrags möglicherweise wieder Gelder von der Association eingeplant und bereitgestellt werden wäre eine denkbare Lösung.
+
+\subsection{Begründung \emph{''Wie wird Contao durch das Projekt gefördert``}}
+
+Contao und die Contao Community profitieren, da Entwickler schneller Updates bereitstellen können und die Updates sich sicherer und schneller installieren lassen. Die Installation inkompatibler Erweiterungen ist damit nicht mehr möglich und somit sinkt die Rate an “zerstörten” Contao Installation drastisch.
+
+Bereits seit über 2 Jahren wird darüber nachgedacht das in die Jahre gekommene ER2 zu ersetzen. Durch Composer stehen den Entwicklern, und damit auch Contao neue Möglichkeiten zur Verfügung.
+
+\subsection{Lizenzen}
+
+Der CCC und das CCP stehen unter der LGPL-3.0 Lizenz. \\
+Das CCR steht unter der MIT Lizenz. \\
+Die CCD steht unter der CC-BY-NC-SA 3.0 Unported Lizenz.
+
+% --------------------------------------------------------------------------------
+%
+%     Entwicklung
+%
+% --------------------------------------------------------------------------------
+
+\newpage
+
+\section{Entwicklung}
+
+\subsection{Dokumentation (CCD)}
+
+Die Dokumentation wird vorwiegend im Rahmen der jeweiligen Entwicklung statt finden, deshalb finden sich in den folgenden Abschnitten mehrere Positionen “Dokumentation” wieder, die sich jeweils auf die vorherige Entwicklungsposition beziehen. Darüber hinaus gibt es noch ein paar allgemeine Punkte zur Dokumentation.
+
+\subsubsection{Allgemeine Benutzerdokumentation}
+
+Was ist Composer? Was ist der Contao Composer Client? Wie wird Composer mit Contao verwendet? Wo finde ich die Erweiterungen?
+Diese Fragen sollen ausführlich beantwortet werden, außerdem soll die bestehende Dokumentation die sich aktuell über das Contao Wiki, github Wiki und weitere Quellen verteilt in der CCD zusammen geführt werden.
+
+\subsubsection{Kommerzielle Pakete mit Composer}
+
+Wie werden kommerzielle Pakete mit Composer erstellt und verteilt? Welche Möglichkeiten der Vermarktung bestehen? Diese Fragen sollen ausführlich beantwortet werden.
+
+\subsection{Entwicklung CCC}
+
+\subsubsection{Milestone 1.0 beta\footnotemark - Bug-Fixing}
+
+\footnotetext{https://github.com/contao-community-alliance/composer-client/milestones/1.0\%20beta\%20\%22bug\%20fixing\%22}
+
+Aktuell gibt es noch eine Menge bekannter Bugs, die im 1. Schritt behoben werden sollen.
+
+\subsubsection{Milestone 1.0\footnotemark - Standalone-Modus}
+
+\footnotetext{https://github.com/contao-community-alliance/composer-client/milestones/1.0\%20stable\%20\%22standalone\%20mode\%22}
+
+Der Composer Client soll als eigenständige Anwendung nutzbar sein, so dass ihn ohne Backend bedienen kann. Das ist vor allem dann wichtig, wenn das Update fehlgeschlagen ist oder es Probleme mit installierten Erweiterungen gibt, so dass das Contao Backend nicht mehr nutzbar ist.
+
+\subsubsection{Milestone 1.1\footnotemark - Migration ER2 $ \Rightarrow $ Composer}
+
+\footnotetext{https://github.com/contao-community-alliance/composer-client/milestones/1.1\%20stable\%20\%22migration\%20wizard\%22}
+
+Bei der Migration von alten Installationen besteht noch Verbesserungsbedarf.
+
+\subsubsection{Milestone 1.2\footnotemark - Rückmigration Composer $ \Rightarrow $ ER2 dokumentieren}
+
+\footnotetext{https://github.com/contao-community-alliance/composer-client/milestones/1.2\%20stable\%20\%22back\%20to\%20old\%20client\%22}
+
+Obwohl wir natürlich den Wunsch haben, dass zukünftig der Composer Client genutzt wird, kann es Gründe geben vom Composer zurück zum ER2 zu wechseln.
+
+\subsubsection{Milestone 1.3\footnotemark - Verbesserte Paket-Detailansicht}
+
+\footnotetext{https://github.com/contao-community-alliance/composer-client/milestones/1.3\%20stable\%20\%22details\%20view\%22}
+
+Die Informationen und Möglichkeiten in der Paket-Detailansicht lassen momentan schwer zu wünschen übrig. Die Ansicht ist stark technisch orientiert und es fehlt weiteren Detailinformationen wie bspw. einer ausführlichen Beschreibung.
+
+\subsubsection{Milestone 1.4\footnotemark - Verbesserte Übersicht installierter Pakete}
+
+\footnotetext{https://github.com/contao-community-alliance/composer-client/milestones/1.4\%20stable\%20\%22installed\%20packages\%20view\%22}
+
+Die Übersicht der installierten Pakete wurde bereits deutlich verbessert. Aber vor allem technisch, aber auch von der Benutzerführung lässt sie doch etwas zu wünschen übrig. Hier soll auch die Benutzerführung und Übersichtlichkeit weiter verbessert und vereinfacht werden.
+
+\subsubsection{Milestone 1.5\footnotemark - Update Assistent}
+
+\footnotetext{https://github.com/contao-community-alliance/composer-client/milestones/1.5\%20stable\%20\%22update\%20assistent\%22}
+
+Updates die bspw. Einstellungen migrieren wurden bisher transparent vom CCP durchgeführt. Dies hat in der Vergangenheit unter anderem zu Problemen geführt. Wir möchten diese in einen Update Assistent auslagern, welcher den Administrator über die notwendigen Updates aufklärt und ihn leitet. Auch die Möglichkeit Updates auszulassen wird es geben, damit schaffen wir die Möglichkeit \textit{optionale Empfehlungen} zu geben.
+
+\subsubsection{Milestone 1.6\footnotemark - Installationsprozess}
+
+\footnotetext{https://github.com/contao-community-alliance/composer-client/milestones/1.6\%20stable\%20\%22installation\%20process\%22}
+
+Beim Installationsprozess (also dann wenn composer ausgeführt wird) möchten wir einige Verbesserungen an der Benutzerführung und der Technik durchführen. Dabei steht vor allem die Kompatibilität zu verschiedenen Shared Hostern im Vordergrund.
+
+\subsubsection{Milestone 1.7\footnotemark - Suche verbessern}
+
+\footnotetext{https://github.com/contao-community-alliance/composer-client/milestones/1.7\%20stable\%20\%22search\%20view\%22}
+
+Die Suche ist momentan schwierig - milde ausgedrückt. Die Suche soll mit Hilfe von Ajax und zusätzlichen Filtermöglichkeiten deutlich verbessert werden, so dass es möglich sein wird gezielter zu suchen.
+
+\subsubsection{Milestone 1.8\footnotemark - Mehrsprachige Beschreibung}
+
+\footnotetext{https://github.com/contao-community-alliance/composer-client/milestones/1.8\%20stable\%20\%22localisation\%22}
+
+Diese Position steht in Zusammenhang mit der Position Verbesserte Paket-Detailansicht. Dabei geht es um die Möglichkeit, eine ausführliche Beschreibung innerhalb der Detailansicht anzeigen zu können und das auch noch Mehrsprachig.
+
+\subsubsection{Milestone 1.9\footnotemark - Upgrade von Paketen}
+
+\footnotetext{https://github.com/contao-community-alliance/composer-client/milestones/1.9\%20stable\%20\%22upgrade\%20processing\%22}
+
+Momentan wird in der Übersicht der installierten Pakete nicht angezeigt, ob ein Update zur Verfügung steht. Man muss quasi in regelmäßigen Abständen auf “Pakete aktualisieren” klicken um immer aktuell zu bleiben. Hier soll eine entsprechende Ansicht mit entsprechender Benutzerführung geschaffen werden.
+
+\subsubsection{Milestone 1.10\footnotemark - Werkzeuge}
+
+\footnotetext{https://github.com/contao-community-alliance/composer-client/milestones/1.10\%20stable\%20\%22tools\%22}
+
+Unter \emph{Werkzeuge} verstehen wir verschiedene Aktionen, die im Zusammenhang mit Composer zur Wartung und Fehlerbehebung wichtig sind. Hier sollen einige neue hilfreiche Werkzeuge geschaffen werden.
+
+\subsubsection{Milestone 1.11\footnotemark - Unterstützung von Drittanbieter-Repositories}
+
+\footnotetext{https://github.com/contao-community-alliance/composer-client/milestones/1.11\%20stable\%20\%22custom\%20repositories\%22}
+
+Durch manuelles verändern der composer.json ist es jetzt schon möglich Drittanbieter-Repositories zu nutzen, um bspw. kommerzielle Pakete über Composer zu installieren. Im Rahmen dieser Position sollen die entsprechenden Hilfmittel geschaffen werden, Drittanbieter-Repositories auf einfache Art und Weise hinzuzufügen und zu verwalten.
+
+\subsubsection{Milestone 1.12\footnotemark - Asset Verwaltung}
+
+\footnotetext{https://github.com/contao-community-alliance/composer-client/milestones/1.12\%20stable\%20\%22asset\%20management\%22}
+
+Installiert man Assets über Composer (bspw. Bootstrap oder Foundation) hat man das Problem, dass man auf die CSS/JS Dateien im vendor Verzeichnis nicht direkt zugreifen kann. Die well-known Dateitypen wurden zwar mittlerweile freigegeben, es kann aber immer noch zu Problemen führen. Wir möchten eine Asset Verwaltung einrichten, mit der es möglich sein wird diese Assets direkt im assets Verzeichnis nutzbar zu machen.
+
+\subsection{Milestone 1.13\footnotemark - NPM/Bower Unterstützung}
+
+\footnote{https://github.com/contao-community-alliance/composer-client/milestones/1.13\%20stable\%20\%22npm/bower\%20support\%22}
+
+Es gibt ein Composer Plugin\footnote{https://github.com/francoispluchino/composer-asset-plugin} mit dem es möglich ist, gezielt NPM und Bower Pakete mittels Composer zu installieren. Wir möchten dieses Plugin im CCC speziell unterstützen so dass es möglich sein wird ohne großen Aufwand NPM und Bower Pakete zu suchen und zu nutzen.
+
+\subsection{Entwicklung CCP}
+
+\subsubsection{Verschlankung}
+
+Aktuell enthällt das Plugin die ganze Migrationslogik. Das führte vor allem in Bezug auf Contao 4 bereits zu Problemen. Deshalb soll die ganze Migrationslogik in den CCC (Milestone 1.5) und das neu entstehende MT einfließen.
+
+\subsubsection{Refactoring}
+
+Das aktuelle Vorgehen des Installers, der im Plugin mitgeliefert wird ist aktuell “nicht optimal”. Unter anderem ist es nicht mehr möglich die Konsolenparameter \texttt{--prefer-dist} und \texttt{--prefer-source} zu verwenden. Deshalb müssen die Installer umgeschrieben werden. In dem Zusammenhang sollen auch ein paar neue Funktionen entstehen, bspw. ein Installationsprotokoll, mit dem man nachvollziehen kann, welche Pakete wann und wie installiert, aktualisiert und deinstalliert wurden.
+
+\subsection{Entwicklung CCR}
+
+Auf dem von der Contao Association betriebenen Community Server soll ein Packagist Server installiert und eingerichtet werden. Dieser soll für das Contao Projekt gebrandet werden.
+
+\textbf{Ticket:} contao-community-alliance/composer-reposititory#1\footnote{https://github.com/contao-community-alliance/composer-reposititory/issues/1}
+
+\subsection{Entwicklung CJG}
+
+Der composer.json Generator ist ein Web-Tool, in das ein Entwickler seine Repository URL einträgt und dann eine auf sein Repository zugeschnittene composer.json erhält. Der Generator analysiert das Repository und nimmt die entsprechenden Eintragungen vor. Zusätzlich soll dem Entwickler durch eine inline-Dokumentation die composer.json näher gebracht werden.
+
+\textbf{Ticket:} contao-community-alliance/composer.json-generator#1\footnote{https://github.com/contao-community-alliance/composer-reposititory/issues/1}
+
+\subsection{Entwicklung DUT}
+
+\begin{quotation}
+Warum brauchen wir ein eigenständiges Tool für das Datenbankupdate? Das haben wir doch schon?
+\end{quotation}
+
+Ja das ist richtig, wir wollen das Rad ja auch nicht neu erfinden. Genau genommen wollen wir den DCA Extractor aus Contao 4 extrahieren, aufarbeiten und mit dem Doctrine Schema Tool “verheiraten”.
+
+Oder mit anderen Worten: Wir wollen hier auf die existierende Funktion von Contao aufbauen und verbessern. Das wichtigste Dabei ist allerdings, dass wir mit diesem Tool vom Contao Framework selbst unabhängig werden wollen. Das ist vor allem für den Standalone Modus wichtig, der auch ohne funktionierendes Contao System lauffähig sein soll. Aber auch für Contao 4 gibt das uns Entwicklern mehr Möglichkeiten.
+
+\textbf{Ticket:} contao-community-alliance/database-update-tool#1\footnote{https://github.com/contao-community-alliance/database-update-tool/issues/1}
+
+\subsection{Entwicklung MT}
+
+\begin{quotation}
+Warum brauchen wir ein Migration Tool? Reicht die runonce.php nicht aus?
+\end{quotation}
+
+Die \texttt{runonce.php} ist nicht immer einfach zu handhaben. Im Fehlerfall kann es passieren, dass wichtige Updates gar nicht ausgeführt werden ohne das der Administrator etwas davon mit bekommt, außer dass eine Extension ggf. nicht mehr richtig funktioniert. Im schlimmsten Fall kann es sogar dazu führen, dass das Install-Tool / Datenbankupdate nicht mehr aufrufbar ist (=weiße Seite) und erst nach löschen von defekten \texttt{runonce.php} Dateien wieder funktioniert.
+
+Das Migration Tool verfolgt drei Ziele:
+
+\begin{itemize}
+\item Dem Administrator wieder mehr Kontrolle über die Migrationsschritte nach einem Update einräumen.
+\item Dem Administrator ausreichende Informationen bei fehlerhafte Updates bereitstellen.
+\item Dem Entwickler das Bereitstellen von Migrationsschritten zu vereinfachen.
+\end{itemize}
+
+Nicht selten kam es in der Vergangenheit immer wieder vor, dass \texttt{runonce.php's} nicht korrekt ausgeführt wurden. Oft zeigt sich dies in einem Fehlverhalten von Erweiterungen oder sogar dem Fehlen von (alten) Daten. In vielen Fällen konnten derartige Probleme mit dem erneuten Installieren von Erweiterungen behoben werden, aber auch nicht immer. Manchmal muss der Administrator auch selbst Hand anlegen.
+
+Dadurch dass wir die einzelnen Migrationsschritte atomarisieren wollen (d.h. jeder Schritt wird einzeln ausgeführt) können wir dem Administrator detaillierte Informationen bereitstellen wenn etwas schief gelaufen ist. Das hilft dem Administrator bei der Behebung von Fehlern, aber auch dem Entwickler der die Fehler in einem Update beheben kann.
+
+% --------------------------------------------------------------------------------
+%
+%     Angebot / Entwicklungspakete
+%
+% --------------------------------------------------------------------------------
+
+\newpage
+
+\section{Angebot / Entwicklungspakete}
+
+% --------------------------------------------------------------------------------
+%
+%     Glossar
+%
+% --------------------------------------------------------------------------------
+
+\newpage
+
+\section{Glossar}
+
+\begin{description}
+\item[CCA] Contao Community Alliance \\
+https://c-c-a.org
+\item[CCC] Contao Composer Client \\
+https://github.com/contao-community-alliance/composer-client
+\item[CCP] Contao Composer Plugin \\
+https://github.com/contao-community-alliance/composer-plugin
+\item[CCR] Contao Composer Repository \\
+https://github.com/contao-community-alliance/composer-reposititory
+\item[CCD] Contao Composer Dokumentation \\
+https://github.com/contao-community-alliance/composer-docs-de
+\item[CJG] Composer.json Generator \\
+https://github.com/contao-community-alliance/composer.json-generator
+\item[PT] Personentag = 8 Zeitstunden
+\end{description}
+
+%\encl{}% etwaige Anlagenliste   mit \\ trennen
+%\ps %   Postskriptum ohne {}
+%\cc{}%   etwaige Verteilerliste mit \\ trennen
+\end{letter}
+\end{document}
