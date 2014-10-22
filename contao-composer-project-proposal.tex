@@ -44,6 +44,7 @@ Antrag auf Förderung des Contao Composer Projekt durch die Contao Association\\
 % --------------------------------------------------------------------------------
 
 \section*{Historie}
+\label{sec:history}
 
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill} }llp{.7\textwidth}}
 \textbf{Version} & \textbf{Datum} & \textbf{Zusammenfassung} \\
@@ -60,6 +61,7 @@ Antrag auf Förderung des Contao Composer Projekt durch die Contao Association\\
 % --------------------------------------------------------------------------------
 
 \section*{Präambel}
+\label{sec:preamble}
 
 Gefördert werden soll das Contao Composer Projekt, das durch die CCA betreut wird.
 
@@ -104,6 +106,7 @@ Vor allem die \uquot{mangelnde} Usability, die in den Kommentaren des Newsbeitra
 
 \section[tl;dr - Zusammenfassung]{tl;dr - Zusammenfassung\footnote{Too long; didn't read -
 \hreflink{http://en.wikipedia.org/wiki/Wikipedia:Too\_long;\_didn't\_read}}}
+\label{sec:summary}
 
 \textit{Der Antrag ist dir zu lang? Hier findest du eine Zusammenfassung!}
 
@@ -132,6 +135,7 @@ Dabei helfen uns die \uquot{Entwicklungspakete} die zeitgleich zu einem agilen E
 % --------------------------------------------------------------------------------
 
 \section{Warum Composer? Was ist aus dem ER3 geworden?}
+\label{sec:why-composer}
 
 \subsection{Was ist Composer?}
 
@@ -162,6 +166,7 @@ Schon heute wird der CCC in immer mehr Installationen eingesetzt (>15.000 Downlo
 % --------------------------------------------------------------------------------
 
 \section{Vorteile für Nutzer}
+\label{sec:pros-for-users}
 
 \textit{Ein schlanker Core und hochwertige/umfangreiche Erweiterungen}, dafür steht Contao seit 2006. Um die Bereitstellung des Erweiterungskatalogs kümmert sich seit geraumer Zeit das so genannte \uquot{Extension Repository 2}. Ein in die Jahre gekommener Dienst, der heutige Anforderungen an eine Erweiterungsverwaltung nicht mehr erfüllt. So werden aktuell Abhängigkeiten nicht richtig aufgelöst oder es lassen sich inkompatible Erweiterungen installieren.
 
@@ -200,6 +205,7 @@ Mit dem Composer wird es für den Nutzer nicht nur einfacher, sondern vor allem 
 \newpage
 
 \section{Vorteile für Entwickler}
+\label{sec:pros-for-developers}
 
 Einer der größten Schwächen des ER2 besteht in der schlechten Auflösung von Abhängigkeiten zwischen Erweiterungen. Dies beherrscht Composer perfekt. Composer bietet eine große Community, viele “Best-Practices” und neue Versionen können ohne zusätzlichen Aufwand wie bisher beim ER2 bereitgestellt werden.
 
@@ -228,6 +234,7 @@ Ein weiterer, wesentlicher Vorteil ist der Zugriff auf andere nicht-Contao Paket
 \newpage
 
 \section{Antragsteller}
+\label{sec:proposer}
 
 \subsection*{Christian \uquot{xtra} Schiffler}
 
@@ -250,6 +257,7 @@ E-Mail: \href{mailto:tristan.lins@bit3.de}{tristan.lins@bit3.de}
 \newpage
 
 \section{Unterstützer}
+\label{sec:backers}
 
 \subsection*{Tim \uquot{timbec} Becker}
 
@@ -300,6 +308,7 @@ Das ER2 hat gravierende Mängel bei der Abhängigkeitsverwaltung und muss dringe
 \newpage
 
 \section{Beschreibung}
+\label{sec:description}
 
 \subsection{Zielsetzung}
 
@@ -316,6 +325,7 @@ Die CCD soll sowohl für Entwickler, als auch Anwender und Anbieter kommerzielle
 Mit der CCD wurde bereits begonnen, man kann diese unter contao-composer-project.rtfd.org\footnote{\hreflink{http://contao-composer-project.rtfd.org}} einsehen.
 
 \subsection{Langfristige Ziele und Aufgaben}
+\label{sec:long-term-goals}
 
 Die Entwicklungen umfasst nicht nur die nächsten Schritte. In den kommenden Jahren wollen wir weitere Projekte angehen, um das Ökosystem rund um die Contao Paketverwaltung neu aufzubauen.
 
@@ -359,8 +369,10 @@ Die CCD steht unter der CC-BY-NC-SA 3.0 Unported Lizenz.
 \newpage
 
 \section{Entwicklung}
+\label{sec:development}
 
 \subsection{Dokumentation (CCD)}
+\label{subsec:ccd}
 
 Die Dokumentation wird vorwiegend im Rahmen der jeweiligen Entwicklung statt finden, deshalb finden sich in den folgenden Abschnitten mehrere Positionen \uquot{Dokumentation} wieder, die sich jeweils auf die vorherige Entwicklungsposition beziehen. Darüber hinaus gibt es noch ein paar allgemeine Punkte zur Dokumentation.
 
@@ -374,81 +386,100 @@ Diese Fragen sollen ausführlich beantwortet werden, außerdem soll die bestehen
 Wie werden kommerzielle Pakete mit Composer erstellt und verteilt? Welche Möglichkeiten der Vermarktung bestehen? Diese Fragen sollen ausführlich beantwortet werden.
 
 \subsection{Entwicklung CCC}
+\label{subsec:ccc}
 
 \subsubsection[Milestone 1.0 beta - Bug-Fixing]{Milestone 1.0 beta\footnotemark - Bug-Fixing}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.0\%20beta\%20\%22bug\%20fixing\%22}}
+\label{subsec:ccc-milestone-1.0-beta}
+
 Aktuell gibt es noch eine Menge bekannter Bugs, die im 1. Schritt behoben werden sollen.
 
 \subsubsection[Milestone 1.0 - Standalone-Modus]{Milestone 1.0\footnotemark - Standalone-Modus}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.0\%20stable\%20\%22standalone\%20mode\%22}}
+\label{subsec:ccc-milestone-1.0}
+
 Der Composer Client soll als eigenständige Anwendung nutzbar sein, so dass ihn ohne Backend bedienen kann. Das ist vor allem dann wichtig, wenn das Update fehlgeschlagen ist oder es Probleme mit installierten Erweiterungen gibt, so dass das Contao Backend nicht mehr nutzbar ist.
 
 \subsubsection[Milestone 1.1 - Migration ER2 $ \Rightarrow $ Composer]{Milestone 1.1\footnotemark - Migration ER2 $ \Rightarrow $ Composer}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.1\%20stable\%20\%22migration\%20wizard\%22}}
+\label{subsec:ccc-milestone-1.1}
 
 Bei der Migration von alten Installationen besteht noch Verbesserungsbedarf.
 
 \subsubsection[Milestone 1.2 - Rückmigration Composer $ \Rightarrow $ ER2 dokumentieren]{Milestone 1.2\footnotemark - Rückmigration Composer $ \Rightarrow $ ER2 dokumentieren}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.2\%20stable\%20\%22back\%20to\%20old\%20client\%22}}
+\label{subsec:ccc-milestone-1.2}
 
 Obwohl wir natürlich den Wunsch haben, dass zukünftig der Composer Client genutzt wird, kann es Gründe geben vom Composer zurück zum ER2 zu wechseln.
 
 \subsubsection[Milestone 1.3 - Verbesserte Paket-Detailansicht]{Milestone 1.3\footnotemark - Verbesserte Paket-Detailansicht}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.3\%20stable\%20\%22details\%20view\%22}}
+\label{subsec:ccc-milestone-1.3}
 
 Die Informationen und Möglichkeiten in der Paket-Detailansicht lassen momentan schwer zu wünschen übrig. Die Ansicht ist stark technisch orientiert und es fehlt weiteren Detailinformationen wie bspw. einer ausführlichen Beschreibung.
 
 \subsubsection[Milestone 1.4 - Verbesserte Übersicht installierter Pakete]{Milestone 1.4\footnotemark - Verbesserte Übersicht installierter Pakete}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.4\%20stable\%20\%22installed\%20packages\%20view\%22}}
+\label{subsec:ccc-milestone-1.4}
 
 Die Übersicht der installierten Pakete wurde bereits deutlich verbessert. Aber vor allem technisch, aber auch von der Benutzerführung lässt sie doch etwas zu wünschen übrig. Hier soll auch die Benutzerführung und Übersichtlichkeit weiter verbessert und vereinfacht werden.
 
 \subsubsection[Milestone 1.5 - Update Assistent]{Milestone 1.5\footnotemark - Update Assistent}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.5\%20stable\%20\%22update\%20assistent\%22}}
+\label{subsec:ccc-milestone-1.5}
 
 Updates die bspw. Einstellungen migrieren wurden bisher transparent vom CCP durchgeführt. Dies hat in der Vergangenheit unter anderem zu Problemen geführt. Wir möchten diese in einen Update Assistent auslagern, welcher den Administrator über die notwendigen Updates aufklärt und ihn leitet. Auch die Möglichkeit Updates auszulassen wird es geben, damit schaffen wir die Möglichkeit \textit{optionale Empfehlungen} zu geben.
 
 \subsubsection[Milestone 1.6 - Installationsprozess]{Milestone 1.6\footnotemark - Installationsprozess}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.6\%20stable\%20\%22installation\%20process\%22}}
+\label{subsec:ccc-milestone-1.6}
 
 Beim Installationsprozess (also dann wenn composer ausgeführt wird) möchten wir einige Verbesserungen an der Benutzerführung und der Technik durchführen. Dabei steht vor allem die Kompatibilität zu verschiedenen Shared Hostern im Vordergrund.
 
 \subsubsection[Milestone 1.7 - Suche verbessern]{Milestone 1.7\footnotemark - Suche verbessern}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.7\%20stable\%20\%22search\%20view\%22}}
+\label{subsec:ccc-milestone-1.7}
 
 Die Suche ist momentan schwierig - milde ausgedrückt. Die Suche soll mit Hilfe von Ajax und zusätzlichen Filtermöglichkeiten deutlich verbessert werden, so dass es möglich sein wird gezielter zu suchen.
 
 \subsubsection[Milestone 1.8 - Mehrsprachige Beschreibung]{Milestone 1.8\footnotemark - Mehrsprachige Beschreibung}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.8\%20stable\%20\%22localisation\%22}}
+\label{subsec:ccc-milestone-1.8}
 
 Diese Position steht in Zusammenhang mit der Position Verbesserte Paket-Detailansicht. Dabei geht es um die Möglichkeit, eine ausführliche Beschreibung innerhalb der Detailansicht anzeigen zu können und das auch noch Mehrsprachig.
 
 \subsubsection[Milestone 1.9 - Upgrade von Paketen]{Milestone 1.9\footnotemark - Upgrade von Paketen}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.9\%20stable\%20\%22upgrade\%20processing\%22}}
+\label{subsec:ccc-milestone-1.9}
 
 Momentan wird in der Übersicht der installierten Pakete nicht angezeigt, ob ein Update zur Verfügung steht. Man muss quasi in regelmäßigen Abständen auf \uquot{Pakete aktualisieren} klicken um immer aktuell zu bleiben. Hier soll eine entsprechende Ansicht mit entsprechender Benutzerführung geschaffen werden.
 
 \subsubsection[Milestone 1.10 - Werkzeuge]{Milestone 1.10\footnotemark - Werkzeuge}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.10\%20stable\%20\%22tools\%22}}
+\label{subsec:ccc-milestone-1.10}
 
 Unter \emph{Werkzeuge} verstehen wir verschiedene Aktionen, die im Zusammenhang mit Composer zur Wartung und Fehlerbehebung wichtig sind. Hier sollen einige neue hilfreiche Werkzeuge geschaffen werden.
 
 \subsubsection[Milestone 1.11 - Unterstützung von Drittanbieter-Repositories]{Milestone 1.11\footnotemark - Unterstützung von Drittanbieter-Repositories}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.11\%20stable\%20\%22custom\%20repositories\%22}}
+\label{subsec:ccc-milestone-1.11}
 
 Durch manuelles verändern der composer.json ist es jetzt schon möglich Drittanbieter-Repositories zu nutzen, um bspw. kommerzielle Pakete über Composer zu installieren. Im Rahmen dieser Position sollen die entsprechenden Hilfmittel geschaffen werden, Drittanbieter-Repositories auf einfache Art und Weise hinzuzufügen und zu verwalten.
 
 \subsubsection[Milestone 1.12 - Asset Verwaltung]{Milestone 1.12\footnotemark - Asset Verwaltung}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.12\%20stable\%20\%22asset\%20management\%22}}
+\label{subsec:ccc-milestone-1.12}
 
 Installiert man Assets über Composer (bspw. Bootstrap oder Foundation) hat man das Problem, dass man auf die CSS/JS Dateien im vendor Verzeichnis nicht direkt zugreifen kann. Die well-known Dateitypen wurden zwar mittlerweile freigegeben, es kann aber immer noch zu Problemen führen. Wir möchten eine Asset Verwaltung einrichten, mit der es möglich sein wird diese Assets direkt im assets Verzeichnis nutzbar zu machen.
 
 \subsection[Milestone 1.13 - NPM/Bower Unterstützung]{Milestone 1.13\footnotemark - NPM/Bower Unterstützung}
 \footnote{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.13\%20stable\%20\%22npm/bower\%20support\%22}}
+\label{subsec:ccc-milestone-1.13}
 
 Es gibt ein Composer Plugin\footnote{\hreflink{https://github.com/francoispluchino/composer-asset-plugin}} mit dem es möglich ist, gezielt NPM und Bower Pakete mittels Composer zu installieren. Wir möchten dieses Plugin im CCC speziell unterstützen so dass es möglich sein wird ohne großen Aufwand NPM und Bower Pakete zu suchen und zu nutzen.
 
 \subsection{Entwicklung CCP}
+\label{subsec:ccp}
 
 \subsubsection{Verschlankung}
 
@@ -459,16 +490,19 @@ Aktuell enthällt das Plugin die ganze Migrationslogik. Das führte vor allem in
 Das aktuelle Vorgehen des Installers, der im Plugin mitgeliefert wird ist aktuell \uquot{nicht optimal}. Unter anderem ist es nicht mehr möglich die Konsolenparameter \texttt{--prefer-dist} und \texttt{--prefer-source} zu verwenden. Deshalb müssen die Installer umgeschrieben werden. In dem Zusammenhang sollen auch ein paar neue Funktionen entstehen, bspw. ein Installationsprotokoll, mit dem man nachvollziehen kann, welche Pakete wann und wie installiert, aktualisiert und deinstalliert wurden.
 
 \subsection{Entwicklung CCR}
+\label{subsec:ccr}
 
 Auf dem von der Contao Association betriebenen Community Server soll ein Packagist Server installiert und eingerichtet werden. Dieser soll für das Contao Projekt gebrandet werden.\\
 \textbf{Ticket:} contao-community-alliance/composer-reposititory\#1\footnote{\hreflink{https://github.com/contao-community-alliance/composer-reposititory/issues/1}}
 
 \subsection{Entwicklung CJG}
+\label{subsec:cjg}
 
 Der composer.json Generator ist ein Web-Tool, in das ein Entwickler seine Repository URL einträgt und dann eine auf sein Repository zugeschnittene composer.json erhält. Der Generator analysiert das Repository und nimmt die entsprechenden Eintragungen vor. Zusätzlich soll dem Entwickler durch eine inline-Dokumentation die composer.json näher gebracht werden.\\
 \textbf{Ticket:} contao-community-alliance/composer.json-generator\#1\footnote{\hreflink{https://github.com/contao-community-alliance/composer-reposititory/issues/1}}
 
 \subsection{Entwicklung DUT}
+\label{subsec:dut}
 
 \begin{emquotation}
 Warum brauchen wir ein eigenständiges Tool für das Datenbankupdate? \\
@@ -506,6 +540,7 @@ Dadurch dass wir die einzelnen Migrationsschritte atomarisieren wollen (d.h. jed
 \newpage
 
 \section{Angebot / Entwicklungspakete}
+\label{sec:offer}
 
 % --------------------------------------------------------------------------------
 %
