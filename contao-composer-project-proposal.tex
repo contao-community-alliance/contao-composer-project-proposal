@@ -483,11 +483,17 @@ Es gibt ein Composer Plugin\footnote{\hreflink{https://github.com/francoispluchi
 \subsection{Entwicklung CCP}
 \label{subsec:ccp}
 
-\subsubsection{Verschlankung}
+Die Weiterentwicklung des CCP erfolgt in Meilensteinen, die auf github bereits festgehalten wurden. Hier folgt eine kurze Beschreibung der jeweiligen Meilensteine, detaillierte Informationen über deren Inhalt kann dem Ticketsystem auf github entnommen werden.
 
-Aktuell enthällt das Plugin die ganze Migrationslogik. Das führte vor allem in Bezug auf Contao 4 bereits zu Problemen. Deshalb soll die ganze Migrationslogik in den CCC (Milestone 1.5) und das neu entstehende MT einfließen.
+\subsubsection[Milestone 3.0 alpha - Verschlankung]{Milestone 3.0 alpha\footnotemark - Verschlankung}
+\footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-plugin/milestones/3.0\%20alpha\%20-\%20unburden}}
+\label{subsec:ccp-milestone-3.0-alpha}
 
-\subsubsection{Refactoring}
+Aktuell enthällt das Plugin die ganze Migrationslogik. Das führte vor allem in Bezug auf Contao 4 bereits zu Problemen. Deshalb soll die ganze Migrationslogik in den CCC (Milestone 1.5) und das neu entstehende MTK einfließen.
+
+\subsubsection[Milestone 3.0 beta - Refactoring]{Milestone 3.0 beta\footnotemark - Refactoring}
+\footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-plugin/milestones/3.0\%20beta\%20-\%20refactore}}
+\label{subsec:ccp-milestone-3.0-beta}
 
 Das aktuelle Vorgehen des Installers, der im Plugin mitgeliefert wird ist aktuell \uquot{nicht optimal}. Unter anderem ist es nicht mehr möglich die Konsolenparameter \texttt{--prefer-dist} und \texttt{--prefer-source} zu verwenden. Deshalb müssen die Installer umgeschrieben werden. In dem Zusammenhang sollen auch ein paar neue Funktionen entstehen, bspw. ein Installationsprotokoll, mit dem man nachvollziehen kann, welche Pakete wann und wie installiert, aktualisiert und deinstalliert wurden.
 
