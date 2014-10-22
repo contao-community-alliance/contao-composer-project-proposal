@@ -10,6 +10,47 @@ fontsize=10pt% Größe der Grundschrift
 \usepackage{cca-page} % design nach vorschrift
 \usepackage{pifont}
 \usepackage{xparse}
+\usepackage[framemethod=default]{mdframed}
+
+% Custom colors
+\definecolor{grey}{rgb}{.3,.3,.3}
+
+\definecolor{success-background}{rgb}{.87,.94,.85}
+\definecolor{success-border}{rgb}{.84,.91,.78}
+\definecolor{success-text}{rgb}{.24,.46,.24}
+
+\definecolor{info-background}{rgb}{.85,.93,.97}
+\definecolor{info-border}{rgb}{.74,.91,.95}
+\definecolor{info-text}{rgb}{.19,.44,.56}
+
+\definecolor{warning-background}{rgb}{.99,.97,.89}
+\definecolor{warning-border}{rgb}{.98,.92,.8}
+\definecolor{warning-text}{rgb}{.54,.43,.23}
+
+\definecolor{danger-background}{rgb}{.95,.87,.87}
+\definecolor{danger-border}{rgb}{.92,.8,.82}
+\definecolor{danger-text}{rgb}{.66,.27,.26}
+
+% Custom frame
+\newmdenv[linecolor=success-border,backgroundcolor=success-background,roundcorner=8pt]{success-frame}
+\newenvironment{success}%
+{\begin{success-frame}\color{success-text}}%
+{\end{success-frame}}
+
+\newmdenv[linecolor=info-border,backgroundcolor=info-background,roundcorner=8pt]{info-frame}
+\newenvironment{info}%
+{\begin{info-frame}\color{info-text}}%
+{\end{info-frame}}
+
+\newmdenv[linecolor=warning-border,backgroundcolor=warning-background,roundcorner=8pt]{warning-frame}
+\newenvironment{warning}%
+{\begin{warning-frame}\color{warning-text}}%
+{\end{warning-frame}}
+
+\newmdenv[linecolor=danger-border,backgroundcolor=danger-background,roundcorner=8pt]{danger-frame}
+\newenvironment{danger}%
+{\begin{danger-frame}\color{danger-text}}%
+{\end{danger-frame}}
 
 % Table item bullet
 \newcommand{\tabitem}{~~\textbullet~~}
@@ -18,7 +59,6 @@ fontsize=10pt% Größe der Grundschrift
 \def\arraystretch{1.5}
 
 % Custom quote style
-\definecolor{grey}{rgb}{.3,.3,.3}
 \NewDocumentEnvironment{emquote}{m}%
 {\textcolor{grey}{\large \ding{125}}\begin{itshape} \ignorespaces}%
 { \end{itshape}\textcolor{grey}{\large \ding{126}}\\\signed{#1}}
