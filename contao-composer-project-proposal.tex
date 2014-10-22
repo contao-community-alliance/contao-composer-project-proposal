@@ -84,7 +84,7 @@ Außerdem umfasst der Antrag folgende weitere Projekte, die unmittelbar mit dem 
 \begin{itemize}
 \item Database Update Tool (nachfolgend DUT benannt), \\
 ein eigenständiges Tool um das Datenbankupdate durchzuführen. In Contao ist das Datenbankupdate an das Install-Tool oder die Paketverwaltung gebunden. Das DUT soll das Datenbankupdate als eigenständige Komponente anbieten. Sowohl im Backend, als auch im CCC, so wie auf der Konsole!
-\item Migration Tool (nachfolgend MT benannt), ist ein Tool, inspiriert von Doctrine Migrations\footnote{\hreflink{http://www.doctrine-project.org/projects/migrations.html}}, allerdings ist es allgemeiner gehalten und soll als Ersatz für die unspezifizierte \texttt{runone.php} dienen um in Zukunft fehlerhafte oder inkomplette Datenupgrades zu verhindern (bislang hat nur der Core eine \uquot{richtige} Datenmigration vornehmen können).
+\item Migration Toolkit (nachfolgend MTK benannt), ist ein Tool, inspiriert von Doctrine Migrations\footnote{\hreflink{http://www.doctrine-project.org/projects/migrations.html}}, allerdings ist es allgemeiner gehalten und soll als Ersatz für die unspezifizierte \texttt{runone.php} dienen um in Zukunft fehlerhafte oder inkomplette Datenupgrades zu verhindern (bislang hat nur der Core eine \uquot{richtige} Datenmigration vornehmen können).
 \end{itemize}
 
 \subsection*{Welches Ziel hat dieser Antrag?}
@@ -541,14 +541,15 @@ Oder mit anderen Worten: Wir wollen hier auf die existierende Funktion von Conta
 \item[Ticket] contao-community-alliance/database-update-tool\#1\footnote{\hreflink{https://github.com/contao-community-alliance/database-update-tool/issues/1}}
 \end{description}
 
-\subsection{Entwicklung MT}
+\subsection{Entwicklung MTK}
+\label{subsec:mtk}
 
 \begin{emquotation}
 Warum brauchen wir ein Migration Toolkit? Reicht die runonce.php nicht aus?
 \end{emquotation}
 
 Die \texttt{runonce.php} ist nicht immer einfach zu handhaben. Im Fehlerfall kann es passieren, dass wichtige Updates gar nicht ausgeführt werden ohne das der Administrator etwas davon mit bekommt, außer dass eine Extension ggf. nicht mehr richtig funktioniert. Im schlimmsten Fall kann es sogar dazu führen, dass das Install-Tool / Datenbankupdate nicht mehr aufrufbar ist (=weiße Seite) und erst nach löschen von defekten \texttt{runonce.php} Dateien wieder funktioniert.\\
-Das Migration Tool verfolgt drei Ziele:
+Das Migration Toolkit verfolgt drei Ziele:
 
 \begin{dinglist}{'64}
 \item Dem Administrator wieder mehr Kontrolle über die Migrationsschritte nach einem Update einräumen.
