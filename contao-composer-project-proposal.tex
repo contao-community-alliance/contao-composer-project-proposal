@@ -11,6 +11,12 @@ fontsize=10pt% Größe der Grundschrift
 \usepackage{pifont}
 \usepackage{xparse}
 
+% Table item bullet
+\newcommand{\tabitem}{~~\textbullet~~}
+
+% Table array strecht
+\def\arraystretch{1.5}
+
 % Custom quote style
 \definecolor{grey}{rgb}{.3,.3,.3}
 \NewDocumentEnvironment{emquote}{m}%
@@ -577,6 +583,35 @@ Dadurch dass wir die einzelnen Migrationsschritte atomarisieren wollen (d.h. jed
 
 \section{Angebot / Entwicklungspakete}
 \label{sec:offer}
+
+\subsection{Sprint 1: Rework and Refactore}
+\label{subsec:sprint-1}
+
+Im ersten Sprint soll die Oberfläche des CCC überarbeitet werden und die Implementierung des CCP überarbeitet werden.
+Außerdem soll die Dokumentation zusammen geführt und die zugehörigen Teilabschnitten ausgearbeitet werden.
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill} }p{.8\textwidth}r}
+\textbf{Position} & \textbf{Preis} \\
+\hline
+
+\textbf{CCC} \newline
+\tabitem \nameref{subsec:ccc-milestone-1.0-beta} \newline
+\tabitem \nameref{subsec:ccc-milestone-1.0} \newline
+\tabitem \nameref{subsec:ccc-milestone-1.1} \newline
+\tabitem \nameref{subsec:ccc-milestone-1.2} \newline
+\tabitem \nameref{subsec:ccc-milestone-1.3} \newline
+\tabitem \nameref{subsec:ccc-milestone-1.4} \newline
+& \euro 5.500 \\
+\hline
+
+\textbf{CCP} \newline
+\tabitem \nameref{subsec:ccp-milestone-3.0-alpha} \newline
+\tabitem \nameref{subsec:ccp-milestone-3.0-beta}
+& \euro 2.500 \\
+\hline
+
+& \textbf{\euro 8.000}
+\end{tabular*}
 
 % --------------------------------------------------------------------------------
 %
