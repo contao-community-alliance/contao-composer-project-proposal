@@ -1,0 +1,80 @@
+\@writefile{lof}{\select@language{ngerman}}
+\@writefile{lot}{\select@language{ngerman}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Serverbetrieb und Administration des CCR}{18}{section*.28}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Weiterentwicklung und Pflege des CCC+CCP}{18}{section*.29}}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Glossar}{25}{section.67}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}tl;dr - Zusammenfassung}{5}{section.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Warum Composer? Was ist aus dem ER3 geworden?}{6}{section.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Vorteile f\IeC {\"u}r Nutzer}{7}{section.10}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Vorteile f\IeC {\"u}r Entwickler}{13}{section.11}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Antragsteller}{14}{section.12}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Unterst\IeC {\"u}tzer}{15}{section.15}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Beschreibung}{17}{section.22}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Entwicklung}{19}{section.32}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Angebot / Entwicklungspakete}{24}{section.63}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Was ist Composer?}{6}{subsection.7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Darum Composer}{6}{subsection.8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Composer Integration? Gibt es doch schon!}{6}{subsection.9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Zielsetzung}{17}{subsection.23}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Langfristige Ziele und Aufgaben}{17}{subsection.24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Begr\IeC {\"u}ndung: \glqq {}Wie wird Contao durch das Projekt gef\IeC {\"o}rdert\grqq {}}{18}{subsection.30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Lizenzen}{18}{subsection.31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Dokumentation (CCD)}{19}{subsection.33}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Entwicklung CCC}{19}{subsection.36}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Milestone 1.13 - NPM/Bower Unterst\IeC {\"u}tzung}{21}{subsection.51}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Entwicklung CCP}{22}{subsection.52}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Entwicklung CCR}{22}{subsection.55}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.6}Entwicklung CJG}{22}{subsection.57}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.7}Entwicklung DUT}{23}{subsection.59}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.8}Entwicklung MTK}{23}{subsection.61}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Sprint 1: Rework and Refactore}{24}{subsection.64}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Sprint 2: Contao Repository Server}{24}{subsection.65}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}Sprint 3: Composer.json Generator}{24}{subsection.66}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.1}Einf\IeC {\"u}hrung eines erweiterten Packagist Servers f\IeC {\"u}r Contao Erweiterungen (=CCR)}{17}{subsubsection.25}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.2}Erweitern des CCR in einen \glqq {}App Store\grqq {}}{18}{subsubsection.26}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.3}Langfristige Finanzierung}{18}{subsubsection.27}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.1.1}Allgemeine Benutzerdokumentation}{19}{subsubsection.34}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.1.2}Kommerzielle Pakete mit Composer}{19}{subsubsection.35}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.10}Milestone 1.8 - Mehrsprachige Beschreibung}{21}{subsubsection.46}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.11}Milestone 1.9 - Upgrade von Paketen}{21}{subsubsection.47}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.12}Milestone 1.10 - Werkzeuge}{21}{subsubsection.48}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.13}Milestone 1.11 - Unterst\IeC {\"u}tzung von Drittanbieter-Repositories}{21}{subsubsection.49}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.14}Milestone 1.12 - Asset Verwaltung}{21}{subsubsection.50}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.1}Milestone 1.0 beta - Bug-Fixing}{19}{subsubsection.37}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.2}Milestone 1.0 - Standalone-Modus}{19}{subsubsection.38}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.3}Milestone 1.1 - Migration ER2 $ \Rightarrow $ Composer}{19}{subsubsection.39}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.4}Milestone 1.2 - R\IeC {\"u}ckmigration Composer $ \Rightarrow $ ER2 dokumentieren}{20}{subsubsection.40}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.5}Milestone 1.3 - Verbesserte Paket-Detailansicht}{20}{subsubsection.41}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.6}Milestone 1.4 - Verbesserte \IeC {\"U}bersicht installierter Pakete}{20}{subsubsection.42}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.7}Milestone 1.5 - Update Assistent}{20}{subsubsection.43}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.8}Milestone 1.6 - Installationsprozess}{20}{subsubsection.44}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.2.9}Milestone 1.7 - Suche verbessern}{20}{subsubsection.45}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.4.1}Milestone 3.0 alpha - Verschlankung}{22}{subsubsection.53}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.4.2}Milestone 3.0 beta - Refactoring}{22}{subsubsection.54}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.5.1}Milestone 1 - Installation, Einrichtung, Branding}{22}{subsubsection.56}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.6.1}Milestone 1 - Umsetzung}{22}{subsubsection.58}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.7.1}Milestone 1 - Umsetzung}{23}{subsubsection.60}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {8.8.1}Milestone 1 - Umsetzung}{23}{subsubsection.62}}
+\@writefile{toc}{\select@language{ngerman}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\catcode `"\active 
+\fi}
+\fi}
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\global\let\hyper@last\relax 
+\global\let\oldcontentsline\contentsline
+\global\let\oldnewlabel\newlabel
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\zref@newlabel[2]{}
+\select@language{ngerman}
+\xdef\lastpage@lastpageHy{25}
+\xdef\lastpage@lastpage{25}
