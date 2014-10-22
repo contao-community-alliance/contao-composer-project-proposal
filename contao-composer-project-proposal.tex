@@ -1,50 +1,29 @@
-\documentclass[cca-page,%  design nach vorschrift
+\documentclass[
 paper=a4,
-fromphone=on,% tel etc. setzen
-foldmarks=on,% Faltmarken setzen
 draft=false,%     Entwurfsmodus
 fontsize=10pt% Größe der Grundschrift
-]{scrlttr2}
+]{scrartcl}
 
-\usepackage[T1]{fontenc}
-\usepackage{tabularx}
+\def\logo{logos/colorlogo_rgb}% Logo bei Normaldruck.
+%\def\logo{logos/colorlogo_cmyk}% Logo bei Profidruck.
 
-\newcommand*{\signed}[1]%
-{\unskip\hspace*{1em plus 1fill}%
-\nolinebreak[3]\hspace*{\fill}\mbox{\emph{#1}}}
+\usepackage{cca-page} % design nach vorschrift
 
 \begin{document}
 
-\fromlogo{logos/colorlogo_rgb}% Logo bei Normaldruck.
-%\fromlogo{logos/colorlogo_cmyk}% Logo bei Profidruck.
-\setkomavar{fromname}{Contao-Community-Alliance}% Name
-\setkomavar{fromaddress}{The Internet}% Postalische Adresse
-%\setkomavar{fromtel}{+49 (07121) 964 98 65}% Telefonnummer
-%\setkomavar{fromfax}{+49 (07121) 964 98 66}% Faxnummer
-\frommail{info@c-c-a.org}% Mailadresse
-\fromweb{http://c-c-a.org}% Webseite
-\setkomavar{signature}{Die Contao Community Alliance}% Der Name der Unterzeichner
-\setkomavar{shortdate}{18.02.2014}% falls das Datum konstant sein soll.
-\setkomavar{date}{Reutlingen, 18. Feb 2014}
-%\setkomavar{specialmail}{Hauspost}% oder Einschreiben etc.
-%\setkomavar{myref}{}% Mein Zeichen
-%\setkomavar{yourmail}{}% Ihr Schreiben
-%\setkomavar{yourref}{}% Ihr Zeichen
-
-\begin{letter}{
-Contao Association \\
-Sonnhalderain 15 \\
-CH - 3250 Lyss
+\title{%
+An die:\\
+Contao Association\\
+Sonnhalderain 15\\
+CH - 3250 Lyss\\
+\href{http://c-c-a.org}{\includegraphics[width=\textwidth]{\logo}}\\
+Antrag auf Förderung des Contao Composer Projekt durch die Contao Association\\%
 }
+\date{21 Oktober 2014}
+\author{Contao-Community-Alliance}
+\maketitle
 
-\opening{Antrag auf Förderung des Contao Composer Projekt \\
-durch die Contao Association}
-
-Text Text Text Text Text Text Text Text Text Text Text 
-Text Text Text Text Text Text Text Text Text Text Text 
-Text Text Text Text Text Text Text Text Text Text Text 
-
-\closing{Mit freundlichen Grüßen,}
+\pagebreak
 
 % --------------------------------------------------------------------------------
 %
@@ -541,8 +520,4 @@ https://github.com/contao-community-alliance/composer.json-generator
 \item[PT] Personentag = 8 Zeitstunden
 \end{description}
 
-%\encl{}% etwaige Anlagenliste   mit \\ trennen
-%\ps %   Postskriptum ohne {}
-%\cc{}%   etwaige Verteilerliste mit \\ trennen
-\end{letter}
 \end{document}

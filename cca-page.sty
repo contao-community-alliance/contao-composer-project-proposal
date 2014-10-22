@@ -1,0 +1,102 @@
+\RequirePackage{graphicx,ifpdf}
+
+\usepackage{eurosym}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{20AC}{\euro}
+
+\RequirePackage[ngerman]{babel}
+\RequirePackage[babel]{microtype}
+
+\RequirePackage[
+    bookmarks,
+    breaklinks=true,
+    bookmarksopen=true,
+    colorlinks=true,
+% diese Farbdefinitionen zeichnen Links im PDF farblich aus
+ %   linkcolor=red, % einfache interne Verknüpfungen
+ %   anchorcolor=black,% Ankertext
+ %   citecolor=blue, % Verweise auf Literaturverzeichniseinträge im Text
+ %   filecolor=magenta, % Verknüpfungen, die lokale Dateien öffnen
+ %   menucolor=red, % Acrobat-Menüpunkte
+ %   urlcolor=blue,
+% diese Farbdefinitionen sollten für den Druck verwendet werden (alles schwarz)
+    linkcolor=black, % einfache interne Verknüpfungen
+    anchorcolor=black, % Ankertext
+    citecolor=black, % Verweise auf Literaturverzeichniseinträge im Text
+    filecolor=black, % Verknüpfungen, die lokale Dateien öffnen
+    menucolor=black, % Acrobat-Menüpunkte
+    urlcolor=black,
+    backref=page,
+    plainpages=false, % zur korrekten Erstellung der Bookmarks
+    pdfpagelabels, % zur korrekten Erstellung der Bookmarks
+    hypertexnames=false, % zur korrekten Erstellung der Bookmarks
+    linktocpage, % Seitenzahlen anstatt Text im Inhaltsverzeichnis verlinken
+    pdftex,
+    pdfborderstyle={/S/U/W 1},
+    hyperfootnotes=false
+]{hyperref}
+
+\RequirePackage[overload]{textcase}
+
+\RequirePackage{lastpage}
+
+\RequirePackage{color}    % für Farben im allgemeinen
+\RequirePackage{colortbl} % für die Hintergrundfarbe einzelner Zellen in Tabellen
+
+\RequirePackage{helvet}%phv
+\RequirePackage{avant}%pag
+
+\renewcommand{\rmdefault}{pag}
+\renewcommand{\sfdefault}{pag}
+\renewcommand{\ttdefault}{phv}
+\renewcommand{\seriesdefault}{l}
+\fontencoding{T1}\fontfamily{phv}\fontsize{10}{14}\selectfont
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage{tabularx}
+
+\KOMAoptions{
+  paper=a4,
+  parskip=full-,%
+}
+
+\RequirePackage[%margin=1.5cm
+]{geometry}
+
+\geometry{a4paper,left=20mm,right=15mm, top=30mm, bottom=2cm}
+
+% "Schoene" quotes.
+\newcommand{\uquot}[1]{\glqq{}#1\grqq{}}
+
+% "Signierte" Zitate
+\renewenvironment{quotation}{\list{}{\leftmargin=0.3in\rightmargin=0.3in}\item[]}{\endlist}
+
+\newcommand*{\signed}[1]%
+{\unskip\hspace*{1em plus 1fill}%
+\nolinebreak[3]\hspace*{\fill}\mbox{\fontencoding{T1}\fontfamily{ppl}\fontsize{8}{14}\selectfont #1}}
+
+%% Kopfbereich erste Seite.
+
+\RequirePackage[automark]{scrpage2}
+\renewcommand*{\pagemark}{{\usekomafont{pagenumber}{%
+    %\pagename\ % auskommentiert
+    \thepage\ / \pageref*{LastPage}}}}
+
+
+\clearscrheadings% Seitenstil scrheadings leeren
+\ohead{\headmark}
+\chead{%
+  \raisebox{\ht\strutbox}[20pt]{%
+    \includegraphics[width=4cm]{\logo}% Beispiellogo
+  }%
+}
+\automark[section]{subsection}
+
+\ifoot{\pagemark}
+\pagestyle{scrheadings}
+
+\newcommand{\hreflink}[1]{\href{#1}{#1}}
+
+% Fussnoten fortlaufend gestalten
+\usepackage{chngcntr}
+\counterwithout{footnote}{section}
