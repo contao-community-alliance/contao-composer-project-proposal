@@ -111,17 +111,17 @@ Wie im Präambel beschrieben umfasst der Antrag das gesamte Contao Composer Proj
 
 Der Antrag verfolgt dabei 2 Ziele:
 Erstens wollen wir die Kritiken aufgreifen und die Bedienbarkeit verbessern. Dies soll zum einen durch Verbesserung der Oberfläche, zum anderen durch bereitstellen einer Dokumentation geschehen.
-Zweitens wollen wir das Ökosystem aufbauen, dass das aktuelle ER2 zur Zeit bietet, so dass wir im Zeitrahmen 2015/2016 ernsthaft darüber reden können, alte ER2 abzulösen. An dieser Stelle erst mal Entwarnung: Das ER2 wird uns noch einige Jahre erhalten bleiben um älteren Contao Installationen nicht \uquot{den Stecker zu ziehen}.
+Zweitens wollen wir das Ökosystem aufbauen, dass das aktuelle ER2 zur Zeit bietet, so dass wir im Zeitrahmen 2015/2016 ernsthaft darüber reden können, das alte ER2 abzulösen. An dieser Stelle erst mal Entwarnung: Das ER2 wird uns noch einige Jahre erhalten bleiben um älteren Contao Installationen nicht \uquot{den Stecker zu ziehen}.
 
 Composer ist nicht ganz unumstritten, da es teilweise sehr Ressourcenhungrig ist. Allerdings stehen uns kaum Alternativen zur Verfügung. Native Paketverwaltungen wie PEAR/PECL fallen auf Shared Hostings weg. Da Composer rein in PHP geschrieben ist, lässt es sich auf nahezu allen PHP Plattformen betreiben. Man muss auch sagen dass sich Composer in den vergangenen 2 Jahren sehr gut weiterentwickelt hat und deutlich verbessert wurde. Die Systemanforderungen sind gesunken und die Performance gestiegen. Wir setzen hier auf die Erfahrung und Arbeit von etwa 10 Entwicklern die regelmäßig zu Composer beitragen. Und über 100 weiteren Entwicklern die hier und da was zum Composer beitragen\footnote{\hreflink{https://github.com/composer/composer/graphs/contributors}}.
 
 Wir sind nicht die einzigen die auf den \uquot{Composer Zug} aufspringen. Drupal, Typo3 NEOS, Laravel, Yii, Doctrine, Symfony und zahllose weitere Projekte nutzen Composer. Es gibt bereits über 40.000 Pakete auf packagist.org zu finden! Diese große Verbreitung wird auch die Shared Hoster dazu zwingen Composer zukünftig besser zu unterstützen.
 
-Der Umfang des Antrags würde würde das Jahresbudget der Association deutlich sprengen. Deshalb wird dieser Antrag in \uquot{Entwicklungspakete} aufgesplittet, die dann zur Förderung eingereicht werden oder durch andere Unternehmen gefördert werden können.
+Der Umfang des Antrags würde das Jahresbudget der Association deutlich sprengen. Deshalb wird dieser Antrag in \uquot{Entwicklungspakete} aufgesplittet, die dann zur Förderung eingereicht werden oder durch andere Unternehmen gefördert werden können.
 Für die Community ist die Gesamtheit des Antrags aber immer noch ein Leitfaden, was alles noch folgen wird.
 Dabei sollte jedoch beachtet werden, dass der Antrag nicht starr ist. Einige mittel- und langfristige Positionen sind noch nicht vollständig ausgearbeitet und geplant und das ist auch beabsichtigt. Die weiterführenden Positionen wollen wir in Zusammenarbeit mit der Community ausarbeiten und planen.
 
-Dabei helfen uns die \uquot{Entwicklungspakete} die zeitgleich zu einem agilen Entwicklungsmodel führen. Nach jedem Entwicklungsschritt können wir ein Resümee ziehen und gemeinsam die nächste Stufe planen.
+Dabei helfen uns die \uquot{Entwicklungspakete} die zeitgleich zu einem agilen Entwicklungsmodel führen. Nach jedem Entwicklungsschritt können wir ein Resümee ziehen und gemeinsam die nächsten Schritte planen.
 
 \newpage
 
@@ -303,11 +303,16 @@ Das ER2 hat gravierende Mängel bei der Abhängigkeitsverwaltung und muss dringe
 
 \subsection{Zielsetzung}
 
-Aktuell ist die Bedienbarkeit des CCC vor allem technisch orientiert. Ziel ist es die Bedienbarkeit dahingehend deutlich zu verbessern, dass technisch wenig versierte Benutzer keine Probleme mehr haben sollten, den CCC zu bedienen (Usability).\\
-Der CCC ist momentan vom Contao Backend abhängig, was vor allem bei einem fehlgeschlagenen Update oft zu Problemen führt, weil man nicht mehr in der Lage ist die Paketverwaltung zu öffnen. Es soll “zusätzlich” zu der Backend Integration einen eigenständigen Modus geben, der auch ohne das Backend funktioniert und mit dem man ein beschädigtes System wieder reparieren kann. Dieser Standalone-Modus wird - ähnlich wie das Contao-Live-Update - über eine PHAR Datei realisiert.\\
-Das CCP beinhaltet aktuell Funktionalitäten, die dort einfach nicht rein gehören. Dazu gehören unter anderem die Migrationsroutinen bei Updates. Diese Funktionen sollen in den CCC einfließen und der CCP soll damit so verschlankt werden, dass er auch für zukünftige Contao Versionen ist. Das betrifft bspw. die anstehende Contao 4 Version, in der sich die Strukturen ändern und dort einige der Migrationsroutinen aktuell noch zu Fehlern führen.\\
-Das CCR in Form einer eigenständigen Packagist Installation soll aufgesetzt und für Contao gebrandet werden. Damit wollen wir verhindern, dass Entwickler die jetzt auf Composer umsteigen, nicht noch einen zweiten Umstieg von Packagist.org auf den neuen Contao Paketserver durchfürhen müssen. In der ersten Form wird der CCR lediglich ein Standard Packagist Server sein. Für 2015 ist ein Förderantrag zur Erweiterung dieses Paketservers geplant, um ihn an die Anforderungen im Contao Umfeld anzupassen.\\
-Die CCD soll sowohl für Entwickler, als auch Anwender und Anbieter kommerzieller Pakete ausgearbeitet werden. Momentan ist die Dokumentation auch noch über viele Quellen verteilt (CCA Website, Contao Wiki, Github Wiki) und soll zentralisiert werden. Die Dokumentation wird in reStructuredText/Sphinx\footnote{\hreflink{http://sphinx-doc.org/}} geschrieben und über Read the Docs\footnote{\hreflink{https://readthedocs.org/}} publiziert. Die Übersetzung erfolgt dann über Transifex\footnote{\hreflink{https://www.transifex.com/}}.\\
+Aktuell ist die Bedienbarkeit des CCC vor allem technisch orientiert. Ziel ist es die Bedienbarkeit dahingehend deutlich zu verbessern, dass technisch wenig versierte Benutzer keine Probleme mehr haben sollten, den CCC zu bedienen (Usability).
+
+Der CCC ist momentan vom Contao Backend abhängig, was vor allem bei einem fehlgeschlagenen Update oft zu Problemen führt, weil man nicht mehr in der Lage ist die Paketverwaltung zu öffnen. Es soll “zusätzlich” zu der Backend Integration einen eigenständigen Modus geben, der auch ohne das Backend funktioniert und mit dem man ein beschädigtes System wieder reparieren kann. Dieser Standalone-Modus wird - ähnlich wie das Contao-Live-Update - über eine PHAR Datei realisiert.
+
+Das CCP beinhaltet aktuell Funktionalitäten, die dort einfach nicht rein gehören. Dazu gehören unter anderem die Migrationsroutinen bei Updates. Diese Funktionen sollen in den CCC einfließen und der CCP soll damit so verschlankt werden, dass er auch für zukünftige Contao Versionen ist. Das betrifft bspw. die anstehende Contao 4 Version, in der sich die Strukturen ändern und dort einige der Migrationsroutinen aktuell noch zu Fehlern führen.
+
+Das CCR in Form einer eigenständigen Packagist Installation soll aufgesetzt und für Contao gebrandet werden. Damit wollen wir verhindern, dass Entwickler die jetzt auf Composer umsteigen, nicht noch einen zweiten Umstieg von Packagist.org auf den neuen Contao Paketserver durchfürhen müssen. In der ersten Form wird der CCR lediglich ein Standard Packagist Server sein. Für 2015 ist ein Förderantrag zur Erweiterung dieses Paketservers geplant, um ihn an die Anforderungen im Contao Umfeld anzupassen.
+
+Die CCD soll sowohl für Entwickler, als auch Anwender und Anbieter kommerzieller Pakete ausgearbeitet werden. Momentan ist die Dokumentation auch noch über viele Quellen verteilt (CCA Website, Contao Wiki, Github Wiki) und soll zentralisiert werden. Die Dokumentation wird in reStructuredText/Sphinx\footnote{\hreflink{http://sphinx-doc.org/}} geschrieben und über Read the Docs\footnote{\hreflink{https://readthedocs.org/}} publiziert. Die Übersetzung erfolgt dann über Transifex\footnote{\hreflink{https://www.transifex.com/}}.
+
 Mit der CCD wurde bereits begonnen, man kann diese unter contao-composer-project.rtfd.org\footnote{\hreflink{http://contao-composer-project.rtfd.org}} einsehen.
 
 \subsection{Langfristige Ziele und Aufgaben}
@@ -331,7 +336,7 @@ Die Pflege des Servers wird primär von den Serveradministratoren durchgeführt.
 
 \paragraph{Weiterentwicklung und Pflege des CCC+CCP} ~\\
 Für die nächsten Jahre soll die Weiterentwicklung und Pflege primär durch die Contao Association im Rahmen dieses Antrags gefördert werden. Wie die finanzielle Absicherung danach aussieht steht noch nicht genau fest.\\
-Bereits bei der Association Mitgliederversammlung 2014 waren im Haushalt Gelder für das Composer Projekt eingeplant gewesen. Dass nach Umsetzung dieses Antrags möglicherweise wieder Gelder von der Association eingeplant und bereitgestellt werden wäre eine denkbare Lösung.
+Bereits bei der Association Mitgliederversammlung 2014 waren im Haushalt Gelder für das Composer Projekt eingeplant gewesen. Dass nach Umsetzung dieses Antrags möglicherweise wieder Gelder im Haushalt der Association eingeplant und bereitgestellt werden wäre eine denkbare Lösung.
 
 \subsection{Begründung: \uquot{Wie wird Contao durch das Projekt gefördert}}
 
