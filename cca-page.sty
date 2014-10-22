@@ -52,6 +52,9 @@
 \renewcommand{\seriesdefault}{l}
 \fontencoding{T1}\fontfamily{phv}\fontsize{10}{14}\selectfont
 
+\let\oldEmph\emph
+\renewcommand{\emph}[1]{\oldEmph{\textbf{#1}}}
+
 \RequirePackage[T1]{fontenc}
 \RequirePackage{tabularx}
 
