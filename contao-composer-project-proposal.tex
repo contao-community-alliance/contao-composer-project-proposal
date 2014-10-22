@@ -256,8 +256,11 @@ Mit dem Composer wird es für den Nutzer nicht nur einfacher, sondern vor allem 
 
 Einer der größten Schwächen des ER2 besteht in der schlechten Auflösung von Abhängigkeiten zwischen Erweiterungen. Dies beherrscht Composer perfekt. Composer bietet eine große Community, viele “Best-Practices” und neue Versionen können ohne zusätzlichen Aufwand wie bisher beim ER2 bereitgestellt werden.
 
-Mittels Composer können die Erweiterungen dort belassen werden, wo sie heutzutage eh meist schon sind: Auf github, bitbucket oder einem anderen Anbieter. Einzige Bedingung dabei ist, dass der Quellcode öffentlich erreichbar sind\footnote{Für Anbieter kommerzieller Erweiterungen gibt es die Möglichkeit - über private Satis Repositories und Artifact Pakete - den eigenen Code vor fremden Zugriffen zu schützen und trotzdem die Erweiterung über Composer zu verteilen. Diese Möglichkeiten werden im Rahmen der Dokumentation genau erklärt.}.
-Es steht auch jedem Entwickler frei, seinen eigenen (privaten) Repository Server zu betreiben oder gänzlich ohne Git zu arbeiten und lediglich zip Downloads bereit zu stellen.
+Mittels Composer können die Erweiterungen dort belassen werden, wo sie heutzutage eh meist schon sind: Auf github, bitbucket oder einem anderen Anbieter. Einzige Bedingung dabei ist, dass der Quellcode öffentlich erreichbar sind*. Es steht auch jedem Entwickler frei, seinen eigenen (privaten) Repository Server zu betreiben oder gänzlich ohne Git zu arbeiten und lediglich zip Downloads bereit zu stellen.
+
+\begin{info}
+* Für Anbieter kommerzieller Erweiterungen gibt es die Möglichkeit - über private Satis Repositories und Artifact Pakete - den eigenen Code vor fremden Zugriffen zu schützen und trotzdem die Erweiterung über Composer zu verteilen. Diese Möglichkeiten werden im Rahmen der Dokumentation genau erklärt.
+\end{info}
 
 Im Gegensatz zum ER2, wo jede Version einzeln von Hand auf dem Server gepflegt werden muss, reicht bei Composer ein einmaliges Registrieren auf dem Paketserver (bspw. packagist.org). Neue Versionen werden ausschließlich durch setzen von Tags im VCS System erzeugt. Da für gewöhnlich diese Tags ohnehin gesetzt werden, fällt die ganze Verwaltung der Versionen auf dem Paketserver weg. Man kann also mit Recht behaupten: Es fällt Arbeit weg und kommt keine neue Arbeit hinzu, um die einzelnen Versionen zu verwalten!
 
