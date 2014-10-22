@@ -268,16 +268,12 @@ Das ER2 hat gravierende Mängel bei der Abhängigkeitsverwaltung und muss dringe
 
 \subsection{Zielsetzung}
 
-Aktuell ist die Bedienbarkeit des CCC vor allem technisch orientiert. Ziel ist es die Bedienbarkeit dahingehend deutlich zu verbessern, dass technisch wenig versierte Benutzer keine Probleme mehr haben sollten, den CCC zu bedienen (Usability).
-
-Der CCC ist momentan vom Contao Backend abhängig, was vor allem bei einem fehlgeschlagenen Update oft zu Problemen führt, weil man nicht mehr in der Lage ist die Paketverwaltung zu öffnen. Es soll “zusätzlich” zu der Backend Integration einen eigenständigen Modus geben, der auch ohne das Backend funktioniert und mit dem man ein beschädigtes System wieder reparieren kann. Dieser Standalone-Modus wird - ähnlich wie das Contao-Live-Update - über eine PHAR Datei realisiert.
-
-Das CCP beinhaltet aktuell Funktionalitäten, die dort einfach nicht rein gehören. Dazu gehören unter anderem die Migrationsroutinen bei Updates. Diese Funktionen sollen in den CCC einfließen und der CCP soll damit so verschlankt werden, dass er auch für zukünftige Contao Versionen ist. Das betrifft bspw. die anstehende Contao 4 Version, in der sich die Strukturen ändern und dort einige der Migrationsroutinen aktuell noch zu Fehlern führen.
-
-Das CCR in Form einer eigenständigen Packagist Installation soll aufgesetzt und für Contao gebrandet werden. Damit wollen wir verhindern, dass Entwickler die jetzt auf Composer umsteigen, nicht noch einen zweiten Umstieg von Packagist.org auf den neuen Contao Paketserver durchfürhen müssen. In der ersten Form wird der CCR lediglich ein Standard Packagist Server sein. Für 2015 ist ein Förderantrag zur Erweiterung dieses Paketservers geplant, um ihn an die Anforderungen im Contao Umfeld anzupassen.
-
-Die CCD soll sowohl für Entwickler, als auch Anwender und Anbieter kommerzieller Pakete ausgearbeitet werden. Momentan ist die Dokumentation auch noch über viele Quellen verteilt (CCA Website, Contao Wiki, Github Wiki) und soll zentralisiert werden. Die Dokumentation wird in reStructuredText/Sphinx\footnote{http://sphinx-doc.org/} geschrieben und über Read the Docs\footnote{https://readthedocs.org/} publiziert. Die Übersetzung erfolgt dann über Transifex\footnote{https://www.transifex.com/}.
-Mit der CCD wurde bereits begonnen, man kann diese unter contao-composer-project.rtfd.org\footnote{http://contao-composer-project.rtfd.org} einsehen.
+Aktuell ist die Bedienbarkeit des CCC vor allem technisch orientiert. Ziel ist es die Bedienbarkeit dahingehend deutlich zu verbessern, dass technisch wenig versierte Benutzer keine Probleme mehr haben sollten, den CCC zu bedienen (Usability).\\
+Der CCC ist momentan vom Contao Backend abhängig, was vor allem bei einem fehlgeschlagenen Update oft zu Problemen führt, weil man nicht mehr in der Lage ist die Paketverwaltung zu öffnen. Es soll “zusätzlich” zu der Backend Integration einen eigenständigen Modus geben, der auch ohne das Backend funktioniert und mit dem man ein beschädigtes System wieder reparieren kann. Dieser Standalone-Modus wird - ähnlich wie das Contao-Live-Update - über eine PHAR Datei realisiert.\\
+Das CCP beinhaltet aktuell Funktionalitäten, die dort einfach nicht rein gehören. Dazu gehören unter anderem die Migrationsroutinen bei Updates. Diese Funktionen sollen in den CCC einfließen und der CCP soll damit so verschlankt werden, dass er auch für zukünftige Contao Versionen ist. Das betrifft bspw. die anstehende Contao 4 Version, in der sich die Strukturen ändern und dort einige der Migrationsroutinen aktuell noch zu Fehlern führen.\\
+Das CCR in Form einer eigenständigen Packagist Installation soll aufgesetzt und für Contao gebrandet werden. Damit wollen wir verhindern, dass Entwickler die jetzt auf Composer umsteigen, nicht noch einen zweiten Umstieg von Packagist.org auf den neuen Contao Paketserver durchfürhen müssen. In der ersten Form wird der CCR lediglich ein Standard Packagist Server sein. Für 2015 ist ein Förderantrag zur Erweiterung dieses Paketservers geplant, um ihn an die Anforderungen im Contao Umfeld anzupassen.\\
+Die CCD soll sowohl für Entwickler, als auch Anwender und Anbieter kommerzieller Pakete ausgearbeitet werden. Momentan ist die Dokumentation auch noch über viele Quellen verteilt (CCA Website, Contao Wiki, Github Wiki) und soll zentralisiert werden. Die Dokumentation wird in reStructuredText/Sphinx\footnote{\hreflink{http://sphinx-doc.org/}} geschrieben und über Read the Docs\footnote{\hreflink{https://readthedocs.org/}} publiziert. Die Übersetzung erfolgt dann über Transifex\footnote{\hreflink{https://www.transifex.com/}}.\\
+Mit der CCD wurde bereits begonnen, man kann diese unter contao-composer-project.rtfd.org\footnote{\hreflink{http://contao-composer-project.rtfd.org}} einsehen.
 
 \subsection{Langfristige Ziele und Aufgaben}
 
@@ -294,11 +290,11 @@ Mit dem aktuellen ER2 ist es möglich kommerzielle Erweiterung zu verbreiten. Al
 
 \subsubsection{Langfristige Finanzierung}
 
-\paragraph{Serverbetrieb und Administration des CCR}
+\paragraph{Serverbetrieb und Administration des CCR} ~\\
 Das CCR wird auf dem Community Server der Association betrieben. Falls es auf Dauer notwendig werden sollte, wird die Association einen separaten Server zur Verfügung stellen. Dies ist bereits mit dem Association Vorstand kommuniziert worden.
 Die Pflege des Servers wird primär von den Serveradministratoren durchgeführt. Die spezifische Administration der Software wird unentgeltlich von Tristan Lins und Christian Schiffler übernommen, solange sich der Aufwand in einem wirtschaftlichen akzeptablen Rahmen bewegt.
 
-\paragraph{Weiterentwicklung und Pflege des CCC+CCP}
+\paragraph{Weiterentwicklung und Pflege des CCC+CCP} ~\\
 Für die nächsten Jahre soll die Weiterentwicklung und Pflege primär durch die Contao Association im Rahmen dieses Antrags gefördert werden. Wie die finanzielle Absicherung danach aussieht steht noch nicht genau fest. Bereits bei der Association Mitgliederversammlung 2014 waren in dem Haushalt Gelder für das Composer Projekt eingeplant gewesen. Das nach Umsetzung dieses Antrags möglicherweise wieder Gelder von der Association eingeplant und bereitgestellt werden wäre eine denkbare Lösung.
 
 \subsection{Begründung \emph{\uquot{Wie wird Contao durch das Projekt gefördert}}}
@@ -309,7 +305,7 @@ Bereits seit über 2 Jahren wird darüber nachgedacht das in die Jahre gekommene
 
 \subsection{Lizenzen}
 
-Der CCC und das CCP stehen unter der LGPL-3.0 Lizenz. \\
+Der CCC und das CCP stehen unter der LGPL-3.0 Lizenz.\\
 Das CCR steht unter der MIT Lizenz. \\
 Die CCD steht unter der CC-BY-NC-SA 3.0 Unported Lizenz.
 
@@ -447,8 +443,7 @@ Oder mit anderen Worten: Wir wollen hier auf die existierende Funktion von Conta
 Warum brauchen wir ein Migration Tool? Reicht die runonce.php nicht aus?
 \end{quotation}
 
-Die \texttt{runonce.php} ist nicht immer einfach zu handhaben. Im Fehlerfall kann es passieren, dass wichtige Updates gar nicht ausgeführt werden ohne das der Administrator etwas davon mit bekommt, außer dass eine Extension ggf. nicht mehr richtig funktioniert. Im schlimmsten Fall kann es sogar dazu führen, dass das Install-Tool / Datenbankupdate nicht mehr aufrufbar ist (=weiße Seite) und erst nach löschen von defekten \texttt{runonce.php} Dateien wieder funktioniert.
-
+Die \texttt{runonce.php} ist nicht immer einfach zu handhaben. Im Fehlerfall kann es passieren, dass wichtige Updates gar nicht ausgeführt werden ohne das der Administrator etwas davon mit bekommt, außer dass eine Extension ggf. nicht mehr richtig funktioniert. Im schlimmsten Fall kann es sogar dazu führen, dass das Install-Tool / Datenbankupdate nicht mehr aufrufbar ist (=weiße Seite) und erst nach löschen von defekten \texttt{runonce.php} Dateien wieder funktioniert.\\
 Das Migration Tool verfolgt drei Ziele:
 
 \begin{itemize}
@@ -457,8 +452,7 @@ Das Migration Tool verfolgt drei Ziele:
 \item Dem Entwickler das Bereitstellen von Migrationsschritten zu vereinfachen.
 \end{itemize}
 
-Nicht selten kam es in der Vergangenheit immer wieder vor, dass \texttt{runonce.php's} nicht korrekt ausgeführt wurden. Oft zeigt sich dies in einem Fehlverhalten von Erweiterungen oder sogar dem Fehlen von (alten) Daten. In vielen Fällen konnten derartige Probleme mit dem erneuten Installieren von Erweiterungen behoben werden, aber auch nicht immer. Manchmal muss der Administrator auch selbst Hand anlegen.
-
+Nicht selten kam es in der Vergangenheit immer wieder vor, dass \texttt{runonce.php's} nicht korrekt ausgeführt wurden. Oft zeigt sich dies in einem Fehlverhalten von Erweiterungen oder sogar dem Fehlen von (alten) Daten. In vielen Fällen konnten derartige Probleme mit dem erneuten Installieren von Erweiterungen behoben werden, aber auch nicht immer. Manchmal muss der Administrator auch selbst Hand anlegen.\\
 Dadurch dass wir die einzelnen Migrationsschritte atomarisieren wollen (d.h. jeder Schritt wird einzeln ausgeführt) können wir dem Administrator detaillierte Informationen bereitstellen wenn etwas schief gelaufen ist. Das hilft dem Administrator bei der Behebung von Fehlern, aber auch dem Entwickler der die Fehler in einem Update beheben kann.
 
 % --------------------------------------------------------------------------------
