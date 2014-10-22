@@ -9,6 +9,17 @@ fontsize=10pt% Größe der Grundschrift
 
 \usepackage{cca-page} % design nach vorschrift
 \usepackage{pifont}
+\usepackage{xparse}
+
+% Custom quote style
+\definecolor{grey}{rgb}{.3,.3,.3}
+\NewDocumentEnvironment{emquote}{m}%
+{\textcolor{grey}{\large \ding{125}}\begin{itshape} \ignorespaces}%
+{ \end{itshape}\textcolor{grey}{\large \ding{126}}\\\signed{#1}}
+
+\NewDocumentEnvironment{emquotation}{}%
+{\textcolor{grey}{\large \ding{125}}\begin{itshape} \ignorespaces}%
+{ \end{itshape}\textcolor{grey}{\large \ding{126}}}
 
 \begin{document}
 
@@ -124,17 +135,15 @@ Dabei helfen uns die \uquot{Entwicklungspakete} die zeitgleich zu einem agilen E
 
 \subsection{Was ist Composer?}
 
-\begin{quotation}
+\begin{emquote}{Contao Community Alliance}
 Mit Composer\footnote{\hreflink{https://getcomposer.org/}} lassen sich Pakete und Abhängigkeiten in PHP Software verwalten. Das Composer Projekt wurde Anfang 2011 von Nils Adermann und Jordi Boggiano initiiert und erfreut sich seit 2012 wachsender Beliebtheit und Verbreitung. Abgesehen von PEAR\footnote{\hreflink{http://pear.php.net/}}, welches nativ auf dem System ausgeführt wird, gab es für PHP über die letzten Jahre hinweg keine vernünftige Paketverwaltung. Composer ist vollständig in PHP geschrieben und lässt sich daher im Gegensatz zu PEAR auch auf restriktiven Systemen (Shared Hoster) verwenden. Zum Composer-Ökosystem gehört unter anderem Packagist\footnote{\hreflink{https://packagist.org/}}, das als primäres Repository für Pakete dient.
-\signed{Contao Community Alliance}
-\end{quotation}
+\end{emquote}
 
 \subsection{Darum Composer}
 
-\begin{quotation}
-Mit dem CCC+CCP setzen wir auf die beliebte und stark verbreitete \uquot{Composer} Erweiterung. Wir haben uns bewusst dazu entschieden, auf eine starke Basis aufzusetzen und nicht wie in der Vergangenheit die Erweiterungsverwaltung vollständig selber aufzubauen.\\
-\signed{Christian Schiffler, Tristan Lins}
-\end{quotation}
+\begin{emquote}{Christian Schiffler, Tristan Lins}
+Mit dem CCC+CCP setzen wir auf die beliebte und stark verbreitete \uquot{Composer} Erweiterung. Wir haben uns bewusst dazu entschieden, auf eine starke Basis aufzusetzen und nicht wie in der Vergangenheit die Erweiterungsverwaltung vollständig selber aufzubauen.
+\end{emquote}
 
 Hinzu kommt, dass der Code des ER2 Servers aufgrund von Lizenzgründen nicht veröffentlicht werden darf, was die Weiterentwicklung in Zusammenarbeit mit der Community unmöglich macht. 
 
@@ -452,9 +461,10 @@ Der composer.json Generator ist ein Web-Tool, in das ein Entwickler seine Reposi
 
 \subsection{Entwicklung DUT}
 
-\begin{quotation}
-Warum brauchen wir ein eigenständiges Tool für das Datenbankupdate? Das haben wir doch schon?
-\end{quotation}
+\begin{emquotation}
+Warum brauchen wir ein eigenständiges Tool für das Datenbankupdate? \\
+\hspace*{\fill}Das haben wir doch schon?
+\end{emquotation}
 
 Ja das ist richtig, wir wollen das Rad ja auch nicht neu erfinden. Genau genommen wollen wir den DCA Extractor aus Contao 4 extrahieren, aufarbeiten und mit dem Doctrine Schema Tool \uquot{verheiraten}.\\
 Oder mit anderen Worten: Wir wollen hier auf die existierende Funktion von Contao aufbauen und verbessern. Das wichtigste Dabei ist allerdings, dass wir mit diesem Tool vom Contao Framework selbst unabhängig werden wollen. Das ist vor allem für den Standalone Modus wichtig, der auch ohne funktionierendes Contao System lauffähig sein soll. Aber auch für Contao 4 gibt das uns Entwicklern mehr Möglichkeiten.\\
@@ -462,9 +472,9 @@ Oder mit anderen Worten: Wir wollen hier auf die existierende Funktion von Conta
 
 \subsection{Entwicklung MT}
 
-\begin{quotation}
-Warum brauchen wir ein Migration Tool? Reicht die runonce.php nicht aus?
-\end{quotation}
+\begin{emquotation}
+Warum brauchen wir ein Migration Toolkit? Reicht die runonce.php nicht aus?
+\end{emquotation}
 
 Die \texttt{runonce.php} ist nicht immer einfach zu handhaben. Im Fehlerfall kann es passieren, dass wichtige Updates gar nicht ausgeführt werden ohne das der Administrator etwas davon mit bekommt, außer dass eine Extension ggf. nicht mehr richtig funktioniert. Im schlimmsten Fall kann es sogar dazu führen, dass das Install-Tool / Datenbankupdate nicht mehr aufrufbar ist (=weiße Seite) und erst nach löschen von defekten \texttt{runonce.php} Dateien wieder funktioniert.\\
 Das Migration Tool verfolgt drei Ziele:
