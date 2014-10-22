@@ -25,4 +25,5 @@
 *.vrb
 # maybe not such a good idea.
 /*.pdf
+/*.make.temp
 
