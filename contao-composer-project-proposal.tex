@@ -8,6 +8,7 @@ fontsize=10pt% Größe der Grundschrift
 %\def\logo{logos/colorlogo_cmyk}% Logo bei Profidruck.
 
 \usepackage{cca-page} % design nach vorschrift
+\usepackage{pifont}
 
 \begin{document}
 
@@ -172,12 +173,12 @@ Auch das Einstellen und die Pflege der Erweiterungen im ER2 ist für die Entwick
 Mit dem Composer wird es für den Nutzer nicht nur einfacher, sondern vor allem sicherer werden seine Contao-Installation aktuell und stabil zu halten.
 
 \textbf{Vorteile}
-\begin{itemize}
+\begin{dinglist}{'64}
 \item Schneller Updates erhalten
 \item Zukunftssicher
 \item Keine Abhängigkeitskonflikte zwischen Erweiterungen
 \item Einhörner mit Feenstaub
-\end{itemize}
+\end{dinglist}
 
 \newpage
 
@@ -201,13 +202,13 @@ Im Gegensatz zum ER2, wo jede Version einzeln von Hand auf dem Server gepflegt w
 Ein weiterer, wesentlicher Vorteil ist der Zugriff auf andere nicht-Contao Pakete und Bibliotheken. Damit ist es möglich direkt auf Dritt-Software und Bibliotheken (bspw. die Symfony2 Komponenten) zurück zu greifen, ohne diese ständig selbst mitliefern zu müssen, was im ER2 aktuell notwendig ist. Das führt auch zu Komplikationen, wenn 2 Erweiterungen im ER2 die gleiche Drittanbieter Software, aber in unterschiedlichen Versionen verwenden möchten. Composer würde einen solchen Konflikt erkennen und die gleichzeitige Installation verweigern. Bei einem ER2 Paket würde es zu einem Fehlverhalten der Erweiterung führen.
 
 \textbf{Vorteile}
-\begin{itemize}
+\begin{dinglist}{'64}
 \item Großes Öko-System
 \item Dritt Erweiterungen und Bibliotheken in eigenen verwenden
 \item Zukunftssicher dank umfangreicher Community
 \item Abhängigkeitskonflikte zwischen Erweiterungen werden zuverlässig erkannt und vermieden.
 \item Einhörner ohne Feenstaub
-\end{itemize}
+\end{dinglist}
 
 % --------------------------------------------------------------------------------
 %
@@ -468,11 +469,11 @@ Warum brauchen wir ein Migration Tool? Reicht die runonce.php nicht aus?
 Die \texttt{runonce.php} ist nicht immer einfach zu handhaben. Im Fehlerfall kann es passieren, dass wichtige Updates gar nicht ausgeführt werden ohne das der Administrator etwas davon mit bekommt, außer dass eine Extension ggf. nicht mehr richtig funktioniert. Im schlimmsten Fall kann es sogar dazu führen, dass das Install-Tool / Datenbankupdate nicht mehr aufrufbar ist (=weiße Seite) und erst nach löschen von defekten \texttt{runonce.php} Dateien wieder funktioniert.\\
 Das Migration Tool verfolgt drei Ziele:
 
-\begin{itemize}
+\begin{dinglist}{'64}
 \item Dem Administrator wieder mehr Kontrolle über die Migrationsschritte nach einem Update einräumen.
 \item Dem Administrator ausreichende Informationen bei fehlerhafte Updates bereitstellen.
 \item Dem Entwickler das Bereitstellen von Migrationsschritten zu vereinfachen.
-\end{itemize}
+\end{dinglist}
 
 Nicht selten kam es in der Vergangenheit immer wieder vor, dass \texttt{runonce.php's} nicht korrekt ausgeführt wurden. Oft zeigt sich dies in einem Fehlverhalten von Erweiterungen oder sogar dem Fehlen von (alten) Daten. In vielen Fällen konnten derartige Probleme mit dem erneuten Installieren von Erweiterungen behoben werden, aber auch nicht immer. Manchmal muss der Administrator auch selbst Hand anlegen.\\
 Dadurch dass wir die einzelnen Migrationsschritte atomarisieren wollen (d.h. jeder Schritt wird einzeln ausgeführt) können wir dem Administrator detaillierte Informationen bereitstellen wenn etwas schief gelaufen ist. Das hilft dem Administrator bei der Behebung von Fehlern, aber auch dem Entwickler der die Fehler in einem Update beheben kann.
