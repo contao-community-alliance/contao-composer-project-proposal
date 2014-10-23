@@ -222,12 +222,6 @@ Schon heute wird der CCC in immer mehr Installationen eingesetzt (>15.000 Downlo
 
 Die Schwächen des aktuellen Composer Client Plugins für die Nutzer sind uns bewusst, mit Hilfe dieses Antrags wollen wir neben dem \uquot{Unterbau} vor allem die Übersichtlichkeit beim finden, installieren und verwalten von Erweiterungen deutlich verbessern.
 
-\includegraphics[width=\textwidth]{bilder/composer-search.png}
-\includegraphics[width=\textwidth]{bilder/Composer-search-result.png}
-\includegraphics[width=\textwidth]{bilder/Composer-detail.png}
-\includegraphics[width=\textwidth]{bilder/tristan-scribble.jpg}
-\includegraphics[width=\textwidth]{bilder/tristan-scribble-2.jpg}
-
 Durch die veraltete und unzureichende Implementierung der Abhängigkeitsverwaltung im ER2 ist es aktuell möglich, wenn nicht gar wahrscheinlich, dass sich Nutzer inkompatible Erweiterungen installieren und somit potentiell die Installation lahm legen (gelbe Box). Diese Probleme werden durch Composer weitestgehend vermieden, so lange die Entwickler selbst keinen Mist bauen. Und sollte das Backend doch einmal nicht mehr nutzbar sein, kann man mit Hilfe des Standalone Modus die defekte Erweiterung auch wieder entfernen und das Backend \uquot{wiederbeleben}. Mit dem ER2 ist dies aktuell nicht möglich.
 
 Als Nutzer bekommt man das aktuell eher selten zu spüren. Für die Erweiterungsentwickler bedeutet dies oft zahlreiche extra Stunden um zu verhindern, das nach einem einfachen Update von Erweiterungen hunderte von Contao Seiten nicht mehr funktionieren. Trotzdem kommt das immer wieder vor, was unter anderem an der schlechten Abhängigkeitsverwaltung des ER2 liegt.
@@ -487,6 +481,34 @@ Obwohl wir natürlich den Wunsch haben, dass zukünftig der Composer Client genu
 
 Die Informationen und Möglichkeiten in der Paket-Detailansicht lassen momentan schwer zu wünschen übrig. Die Ansicht ist stark technisch orientiert und es fehlt weiteren Detailinformationen wie bspw. einer ausführlichen Beschreibung.
 
+\paragraph{Mockups} ~\\
+Nachfolgend möchten wir einen Ausblick auf interne Entwürfe geben, die auf Basis interner Diskussionen und Tickets entstanden sind.
+
+\begin{danger}
+Die Mockups sind als Prototypen zu betrachten. \\
+Die Entgültige Version kann von den hier gezeigten Screenshots abweichen!
+\end{danger}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{bilder/mockup-details-1}
+  \caption{Mockup: Prototyp für neue Detailansicht mit einfacher Versionsauswahl}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{bilder/mockup-details-2}
+  \caption{Mockup: Prototyp für neue Detailansicht mit erweiterter Versionsauswahl}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{bilder/mockup-details-3}
+  \caption{Mockup: Prototyp für neue Detailansicht mit Eingabe der Version für Experten}
+\end{figure}
+
+\pagebreak
+
 \subsubsection[Milestone 1.4 - Verbesserte Übersicht installierter Pakete]{Milestone 1.4\footnotemark - Verbesserte Übersicht installierter Pakete}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.4\%20stable\%20\%22installed\%20packages\%20view\%22}}
 \label{subsec:ccc-milestone-1.4}
@@ -510,6 +532,28 @@ Beim Installationsprozess (also dann wenn composer ausgeführt wird) möchten wi
 \label{subsec:ccc-milestone-1.7}
 
 Die Suche ist momentan schwierig - milde ausgedrückt. Die Suche soll mit Hilfe von Ajax und zusätzlichen Filtermöglichkeiten deutlich verbessert werden, so dass es möglich sein wird gezielter zu suchen.
+
+\paragraph{Mockups} ~\\
+Nachfolgend möchten wir einen Ausblick auf interne Entwürfe geben, die auf Basis interner Diskussionen und Tickets entstanden sind.
+
+\begin{danger}
+Die Mockups sind als Prototypen zu betrachten. \\
+Die Entgültige Version kann von den hier gezeigten Screenshots abweichen!
+\end{danger}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{bilder/mockup-search-bar}
+  \caption{Mockup: Prototyp für neue Suchleiste}
+\end{figure}
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=\textwidth]{bilder/mockup-search-result}
+  \caption{Mockup: Prototyp für neue Suchergebnis}
+\end{figure}
+
+\pagebreak
 
 \subsubsection[Milestone 1.8 - Mehrsprachige Beschreibung]{Milestone 1.8\footnotemark - Mehrsprachige Beschreibung}
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/milestones/1.8\%20stable\%20\%22localisation\%22}}
