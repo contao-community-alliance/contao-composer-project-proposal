@@ -119,32 +119,36 @@ Dabei helfen uns die \uquot{Entwicklungspakete} die zeitgleich zu einem agilen E
 
 % --------------------------------------------------------------------------------
 %
-%     Warum Composer? Was ist aus dem ER3 geworden?
+%     Composer, was ist das?
 %
 % --------------------------------------------------------------------------------
 
-\section{Warum Composer? Was ist aus dem ER3 geworden?}
+\section{Composer, was ist das?}
 \label{sec:why-composer}
 
-\subsection{Was ist Composer?}
+\subsection{Verwirrende Nomenklatur - Was ist Composer?}
 
-\begin{emquote}{Contao Community Alliance}
-Mit Composer\footnote{\hreflink{https://getcomposer.org/}} lassen sich Pakete und Abhängigkeiten in PHP Software verwalten. Das Composer Projekt wurde Anfang 2011 von Nils Adermann und Jordi Boggiano initiiert und erfreut sich seit 2012 wachsender Beliebtheit und Verbreitung. Abgesehen von PEAR\footnote{\hreflink{http://pear.php.net/}}, welches nativ auf dem System ausgeführt wird, gab es für PHP über die letzten Jahre hinweg keine vernünftige Paketverwaltung. Composer ist vollständig in PHP geschrieben und lässt sich daher im Gegensatz zu PEAR auch auf restriktiven Systemen (Shared Hoster) verwenden. Zum Composer-Ökosystem gehört unter anderem Packagist\footnote{\hreflink{https://packagist.org/}}, das als primäres Repository für Pakete dient.
-\end{emquote}
+\uquot{Composer} hört man als Begriff in der Contao Community in letzter Zeit sehr häufig. Dabei stammt Composer gar nicht aus dem Contao Umfeld. Composer\footnote{\hreflink{https://getcomposer.org}} ist eine sogenannte Paketverwaltung speziell für PHP - nicht nur speziell für Contao. Das Composer Projekt wurde Anfang 2011 von Nils Adermann und Jordi Boggiano initiiert und erfreut sich seit 2012 wachsender Beliebtheit und Verbreitung. Abgesehen von PEAR\footnote{\hreflink{http://pear.php.net/}}, welches nativ auf dem System ausgeführt wird, gab es für PHP über die letzten Jahre hinweg keine vernünftige Paketverwaltung. Composer ist vollständig in PHP geschrieben und lässt sich daher im Gegensatz zu PEAR auch auf restriktiven Systemen (Shared Hoster) verwenden. Zum Composer-Ökosystem gehört unter anderem Packagist\footnote{\hreflink{https://packagist.org/}}, das als primäres Repository für Pakete dient.
 
-\subsection{Darum Composer}
+\begin{info}
+In diesem Dokument ist mit \textbf{Composer} immer das Composer Projekt von Nils und Jordi gemeint.
+In der Contao Community ist damit umgangssprachlich der \textbf{Contao Composer Client} gemeint.
+Leider führt das des öffteren immer wieder zu Verwirrung. \\
+\\
+Unter dem Begriff \textbf{Contao Composer Projekt} - umgangssprachlich auch als \textbf{Composer Projekt} abgekürzt - vereinen wir alle zugehörigen Teilprojekte (siehe \nameref{sec:preamble}).
+\end{info}
+
+\subsection{Was ist aus dem ER3 geworden?}
+
+Das ER3, auch bekannt als RFCCC-1\footnote{\hreflink{http://bit.ly/rfccc1}} war ein Vorstoß aus 2011 um den Weg für einen neuen Erweiterungskatalog zu ebnen, im gleichen Jahr hat Composer das Licht der Welt erblickt. Im Jahr 2012 hatte Composer dann seinen großen Aufschwung und wir hatten neugierige Blicke auf dieses aufstrebende Projekt geworfen. Anfang 2013 entstand dann die erste Integration von Composer für Contao.
 
 \begin{emquote}{Christian Schiffler, Tristan Lins}
-Mit dem CCC+CCP setzen wir auf die beliebte und stark verbreitete \uquot{Composer} Erweiterung. Wir haben uns bewusst dazu entschieden, auf eine starke Basis aufzusetzen und nicht wie in der Vergangenheit die Erweiterungsverwaltung vollständig selber aufzubauen.
+Als wir die RFCCC-1 (ER3 Dokumentation) schrieben, haben wir festgestellt dass die ganze Thematik \uquot{Paketverwaltung und Abhängigkeitsmanagement} technisch deutlich komplexer ist, als es auf den ersten Blick den Eindruck macht. Nils und Jordi haben hier eine großartige Vorarbeit geleistet, viele Stunden investiert und obendrein eine große Anzahl an Mitstreitern um sich geschart die regelmäßig Pull Requests stellen - wir gehören auch dazu. Composer mag durchaus auch seine Schwächen haben - bspw. relativ hohe Systemanforderungen - aber wir könnten es auch nicht besser machen, besonders nicht bei gleicher Funktionalität.
 \end{emquote}
 
-Hinzu kommt, dass der Code des ER2 Servers aufgrund von Lizenzgründen nicht veröffentlicht werden darf, was die Weiterentwicklung in Zusammenarbeit mit der Community unmöglich macht. 
+Für uns war, ist und bleibt Composer aktuell die beste Grundlage die wir nutzen können. Das ER3 ist also nicht gestorben, viel mehr haben wir mit Composer die Grundlage zur Hand, um das ER3 in erschwinglicher Zeit darauf aufzubauen.
 
-\subsection{Composer Integration? Gibt es doch schon!}
-
-Richtig. Die Integration von Composer in Contao wurde Anfang 2013 von Dominik Zogg und Tristan Lins initiiert. Mittlerweile wurde aus einer einfachen Integration auf Konsolenbasis ein umfangreicher Client mit Integration in das Contao Backend. Um den Composer Client entwickelt sich seit kurzem ein entsprechendes Ökosystem. Für den vereinfachten Übergang des alten ER2 betreibt die CCA ein Repository, über das die alten Legacy Pakete mit Composer installiert werden können.
-
-Schon heute wird der CCC in immer mehr Installationen eingesetzt (>15.000 Downloads). Das hier technisch weniger versierte Anwender oft nicht gut mit zurecht kommen, liegt auch daran das die aktuelle Integration noch aus der Feder \uquot{von Entwicklern für Entwickler} stammt und viele Punkte für einen gute Nutzer-Integration bisher aus Zeitmangel nicht umgesetzt werden konnten.
+Schon heute wird der Contao Composer Client in immer mehr Installationen eingesetzt (>15.000 Downloads).
 
 \newpage
 
