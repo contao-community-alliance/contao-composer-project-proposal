@@ -161,25 +161,37 @@ Schon heute wird der Contao Composer Client in immer mehr Installationen eingese
 \section{Vorteile für Nutzer}
 \label{sec:pros-for-users}
 
-\textit{Ein schlanker Core und hochwertige/umfangreiche Erweiterungen}, dafür steht Contao seit 2006. Um die Bereitstellung des Erweiterungskatalogs kümmert sich seit geraumer Zeit das so genannte \uquot{Extension Repository 2}. Ein in die Jahre gekommener Dienst, der heutige Anforderungen an eine Erweiterungsverwaltung nicht mehr erfüllt. So werden aktuell Abhängigkeiten nicht richtig aufgelöst oder es lassen sich inkompatible Erweiterungen installieren.
+\begin{minipage}{.02\linewidth}
+  \rotatebox{90}{\textbf{tl;dr - Vorteile auf einen Blick}}
+\end{minipage}
+\begin{minipage}{.98\linewidth}
+  \begin{dinglist}{'64}
+  \item Abhängigkeitskonflikte zwischen Erweiterungen werden automatisch aufgelöst und nur kompatible Versionen werden installiert - Stichwort: Versionshopping\footnotemark.
+  \item Man erhällt schneller Updates und Bugfixes, im Idealfall sofort nach dem ein Bug behoben wurde - Stichwort: Semantische Versionierung\footnotemark.
+  \item Im \textit{Standalone Modus} kann man eine defekte Installation auch ohne FTP und händische Korrektur wiederherstellen.
+  \item Zukunftssicher dank Open Source und einer breiten Entwicklergemeinschaft.
+  \item Einhörner mit Feenstaub.
+  \end{dinglist}
+\end{minipage}
 
-Die Schwächen des aktuellen Composer Client Plugins für die Nutzer sind uns bewusst, mit Hilfe dieses Antrags wollen wir neben dem \uquot{Unterbau} vor allem die Übersichtlichkeit beim finden, installieren und verwalten von Erweiterungen deutlich verbessern.
+\addtocounter{footnote}{-1}
+\footnotetext{Unter Versionshopping verstehen wir die Situation, in der das ER2 dauerhaft eine Erweiterung erst upgraden, danach direkt wieder downgraden will und umgekehrt.\label{fn:versionshopping}}
+\stepcounter{footnote}
+\footnotetext{\href{http://semver.org/}{SemVer2 (semver.org)} beschreibt eine Art wie man Versionen einer Software festlegt. Der 3. Level einer Version (also der Z Level: x.y.\textbf{Z}) dient dabei zum versionieren von Bugfixes. Im Idealfall hat jeder Bugfix seine eigene Versionsnummer. D.h. hat ein Entwickler einen Bug behoben, kann er ihn auch gleich veröffentlichen. Nutzer müssen nicht mehr auf das nächste große Release warten oder sich mühevoll den Bugfix händisch installieren.\label{fn:semver}}
 
-Durch die veraltete und unzureichende Implementierung der Abhängigkeitsverwaltung im ER2 ist es aktuell möglich, wenn nicht gar wahrscheinlich, dass sich Nutzer inkompatible Erweiterungen installieren und somit potentiell die Installation lahm legen (gelbe Box). Diese Probleme werden durch Composer weitestgehend vermieden, so lange die Entwickler selbst keinen Mist bauen. Und sollte das Backend doch einmal nicht mehr nutzbar sein, kann man mit Hilfe des Standalone Modus die defekte Erweiterung auch wieder entfernen und das Backend \uquot{wiederbeleben}. Mit dem ER2 ist dies aktuell nicht möglich.
+\textit{Ein schlanker Core und hochwertige/umfangreiche Erweiterungen}, dafür steht Contao seit 2006. Um die Bereitstellung des Erweiterungskatalogs kümmert sich seit geraumer Zeit das so genannte \uquot{Extension Repository 2} - kurz \uquot{ER2}. Das ER2 stellt aktuell die Erweiterungsliste auf Contao\footnote{\hreflink{https://contao.org/de/extension-list.html}}, so wie den Erweiterungskatalog und die Erweiterungsverwaltung im Contao Backend. Doch das ER2 hat seine Schwächen, so werden Abhängigkeiten nicht richtig aufgelöst - Stichwort: Versionshopping\footref{fn:versionshopping} - oder es lassen sich mit der Contao Version oder mit anderen Erweiterungen inkompatible Erweiterungen installieren.
 
-Als Nutzer bekommt man das aktuell eher selten zu spüren. Für die Erweiterungsentwickler bedeutet dies oft zahlreiche extra Stunden um zu verhindern, das nach einem einfachen Update von Erweiterungen hunderte von Contao Seiten nicht mehr funktionieren. Trotzdem kommt das immer wieder vor, was unter anderem an der schlechten Abhängigkeitsverwaltung des ER2 liegt.
+Unterm Strich muss man sagen, dass die Vorteile von Composer primär die Entwickler betreffen. Doch was für den Entwickler ein Vorteil ist, ist letztlich auch für den Nutzer ein Vorteil. Aber auch die Schwächen des aktuellen CCC für die Nutzer sind uns bewusst und gerade diese wollen wir mit Hilfe dieses Antrags beheben. Dazu zählen unter anderem eine deutliche Verbesserung der Übersichtlichkeit beim finden, installieren und verwalten von Erweiterungen. Zum anderen wollen wir die Kompatibilität zu den zahlreichen Shared Hostern erhöhen.
 
-Auch das Einstellen und die Pflege der Erweiterungen im ER2 ist für die Entwickler äußerst zeitaufwendig. Was in den vergangenen Monaten auch dazu geführt hat das immer mehr Entwickler nach und nach ihre Erweiterungen - aus Zeitmangel - erst gar nicht mehr im ER2 pflegen können, sondern nur noch via Composer verteilen. Durch die Einführung von Composer kommen Nutzer somit zeitnah in den Genuss von Updates, da der Aufwand für Entwickler ungleich geringer ist.
+Aber worum geht es konkret?
 
-Mit dem Composer wird es für den Nutzer nicht nur einfacher, sondern vor allem sicherer werden seine Contao-Installation aktuell und stabil zu halten.
+Durch die veraltete und unzureichende Implementierung der Abhängigkeitsverwaltung im ER2 ist es aktuell möglich, wenn nicht gar wahrscheinlich, dass sich Nutzer Erweiterungen die zu einander oder zur aktuellen Contao Version inkompatibel sind installieren und somit potentiell die Installation lahm legen - Stichwort: \uquot{gelbe Box}. Diese Probleme werden durch Composer weitestgehend vermieden, so lange die Entwickler selbst keinen Mist bauen. Denn Composer hat eine \uquot{strikte} und zugleich \uquot{offener} Auflösung der Abhängigkeiten. Richtig angewendet sorgt das dafür, dass man als Nutzer immer mit dem neuesten, stabilsten und zu meiner Installation kompatiblen Set an Erweiterungen arbeiten kann.
 
-\textbf{Vorteile}
-\begin{dinglist}{'64}
-\item Schneller Updates erhalten
-\item Zukunftssicher
-\item Keine Abhängigkeitskonflikte zwischen Erweiterungen
-\item Einhörner mit Feenstaub
-\end{dinglist}
+Sollte es dennoch zu Problemen kommen - den auch Composer kann uns nicht vor allen Problemen schützen - und sollte das Backend dann nicht mehr nutzbar sein, kann man mit Hilfe des \textit{Standalone Modus} die defekte Erweiterung auch wieder entfernen und das Backend \uquot{wiederbeleben}. Den \textit{Standalone Modus} kann man sich ähnlich wie das Install Tool vorstellen, nur halt für die Erweiterungsverwaltung. Mit dem ER2 ist dies aktuell nicht möglich und man muss von Hand via FTP nachhelfen. Gerade für nicht-Entwickler ist hier nicht selten Nachfragen im Forum, IRC, Twitter und Co. erforderlich.
+
+Ein weiterer Punkt ist die Veröffentlichung von neuen Versionen. Für Entwickler ist dies aktuell relativ zeitaufwendig, abgesehen vom \uquot{taggen}\footnote{Damit bezeichnet man das markieren eines Version zu einem gewissen Stand des Quellcodes} der Version müssen Entwickler die neue Version auch noch auf der Contao Website eintragen, von Hand hochladen\footnote{Es gibt zwar mitlerweile einen github Import, der aber nicht in jeder Situation funktioniert.} und dann auch noch veröffentlichen. Composer und Packagist\footnote{\href{https://packagist.org}{Packagist.org} ist der offizielle Paketserver zu Composer.} automatisieren den Prozess nach dem \uquot{taggen} vollständig. Das macht es Entwicklern einfacher, gerade Bugfixes schnell und unkompliziert zu veröffentlichen - Stichwort: Semantische Versionierung\footref{fn:semver}.
+
+Zu guter letzt haben wir mit dem ER2 noch ein großes Problem, was den wenigsten bekannt ist. Das ER2 wurde ursprünglich exklusiv für Contao entwickelt und unterliegt einer propritären Lizenz, die ausschließlich die Nutzung auf contao.org gestattet. Das bedeutet es ist unmöglich das ER2 - oder zumindest den Server - weiter zu entwickeln, denn Leo Feyer darf den Quellcode des ER2 Servers nicht veröffentlichen. Mit Composer setzen wir auf Open Source Software, die wir an unsere Bedürfnisse anpassen können, wenn es notwendig wird.
 
 \newpage
 
