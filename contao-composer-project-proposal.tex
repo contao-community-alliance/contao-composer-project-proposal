@@ -204,26 +204,30 @@ Zu guter letzt haben wir mit dem ER2 noch ein großes Problem, was den wenigsten
 \section{Vorteile für Entwickler}
 \label{sec:pros-for-developers}
 
-Einer der größten Schwächen des ER2 besteht in der schlechten Auflösung von Abhängigkeiten zwischen Erweiterungen. Dies beherrscht Composer perfekt. Composer bietet eine große Community, viele “Best-Practices” und neue Versionen können ohne zusätzlichen Aufwand wie bisher beim ER2 bereitgestellt werden.
+\begin{minipage}{.02\linewidth}
+  \rotatebox{90}{\textbf{tl;dr - Vorteile auf einen Blick}}
+\end{minipage}
+\begin{minipage}{.98\linewidth}
+  \begin{dinglist}{'64}
+  \item Abhängigkeitskonflikte zwischen Erweiterungen werden zuverlässig erkannt und vermieden.
+  \item Große Auswahl an Contao Erweiterungen und PHP Bibliotheken die man als Abhängigkeit mit installieren lassen kann (mehr als 40.000) - Stichwort: Synergie.
+  \item Die große Community sorgt für eine ständige Weiterentwicklung von Composer und dessen Ökosystems - Stichwort: Zukunftssicher.
+  \item Einfache und \uquot{automatisierte} veröffentlichung von neuen Versionen - Stichwort: Semantische Versionierung.
+  \item Einhörner ohne Feenstaub
+  \end{dinglist}
+\end{minipage}
 
-Mittels Composer können die Erweiterungen dort belassen werden, wo sie heutzutage eh meist schon sind: Auf github, bitbucket oder einem anderen Anbieter. Einzige Bedingung dabei ist, dass der Quellcode öffentlich erreichbar sind*. Es steht auch jedem Entwickler frei, seinen eigenen (privaten) Repository Server zu betreiben oder gänzlich ohne Git zu arbeiten und lediglich zip Downloads bereit zu stellen.
+Den meisten Entwicklern sollten die Schwächen des ER2 bekannt sein. Die schlechten und unzureichnde Auflösung von Abhängigkeiten zwischen Erweiterungen sorgt regelmäßig für Probleme. Und die Aufwendige Pflege zur Veröffentlichung neuer Versionen ist nichts weiter als eine große ABM\footnote{Arbeitsbeschaffungsmaßnahme}.
+
+Composer beherscht das Auflösen von Abhängigkeiten perfekt. Mit Hilfe der \textit{Versionsconstraint} kann man als Entwickler die Abhängigkeiten genau zu definieren. Hinzu kommt das man nicht nur die Abhängigkeiten auf andere Contao Erweiterungen definieren kann. Es ist sogar möglich mehr als 40.000 PHP Bibliotheken zu nutzen. Daraus ergeben sich für Entwickler ganz neue Möglichkeiten - Stichwort: Synergie.
+
+Die große Community sorgt außerdem dafür, dass Composer und sein Ökosystem ständig weiterentwickelt werden. Bei Problemen hilft also nicht nur die Contao Community, sondern auch die Composer Community. Im \#composer\footnote{irc://irc.freenode.net/\#composer} IRC Channel tummeln sich durchschnittlich 100 bis 150 Nutzer täglich, im \#composer-dev\footnote{irc://irc.freenode.net/\#composer-dev} Channel sind es um die 30 bis 50 täglich. Zum vergleich, bei Contao tummeln sich in \#contao\footnote{irc://irc.freenode.net/\#contao} nur um die 30 bis 50 Nutzer und in \#contao.dev\footnote{irc://irc.freenode.net/\#contao.dev} nur 20 bis 25 Entwickler. Die große, wachsende Community liefert auch immer wieder neue \uquot{Best-Practice} Beispiele, Anleitungen und Tutorials.
+
+Veröffentlichen von neuen Versionen wird mittels Composer so einfach wie nie zuvor, denn die Erweiterungen können dort belassen werden, wo sie heutzutage eh meist schon sind: Auf github, bitbucket oder einem anderen Anbieter. Einzige Bedingung dabei ist, dass der Quellcode öffentlich erreichbar sind*. Im Gegensatz zum ER2, wo jede Version einzeln von Hand auf dem ER2 Server gepflegt werden muss, reicht bei Composer ein einmaliges Registrieren auf dem Paketserver (bspw. packagist.org). Neue Versionen werden ausschließlich durch setzen von Tags im VCS System erzeugt. Da für gewöhnlich diese Tags ohnehin gesetzt werden, fällt die ganze Verwaltung der Versionen auf dem Paketserver weg. Man kann also mit Recht behaupten: Es fällt Arbeit weg und kommt keine neue Arbeit hinzu, um die einzelnen Versionen zu verwalten!
 
 \begin{info}
-* Für Anbieter kommerzieller Erweiterungen gibt es die Möglichkeit - über private Satis Repositories und Artifact Pakete - den eigenen Code vor fremden Zugriffen zu schützen und trotzdem die Erweiterung über Composer zu verteilen. Diese Möglichkeiten werden im Rahmen der Dokumentation genau erklärt.
+* Für Anbieter kommerzieller Erweiterungen gibt es die Möglichkeit - über private Satis Repositories und Artifact Pakete - den eigenen Code vor fremden Zugriffen zu schützen und trotzdem die Erweiterung über Composer zu verteilen. Diese Möglichkeiten werden im Rahmen der Dokumentation genau erklärt. Außerdem soll es langfristig einen \uquot{App Store} geben, siehe \nameref{sec:long-term-goals}.
 \end{info}
-
-Im Gegensatz zum ER2, wo jede Version einzeln von Hand auf dem Server gepflegt werden muss, reicht bei Composer ein einmaliges Registrieren auf dem Paketserver (bspw. packagist.org). Neue Versionen werden ausschließlich durch setzen von Tags im VCS System erzeugt. Da für gewöhnlich diese Tags ohnehin gesetzt werden, fällt die ganze Verwaltung der Versionen auf dem Paketserver weg. Man kann also mit Recht behaupten: Es fällt Arbeit weg und kommt keine neue Arbeit hinzu, um die einzelnen Versionen zu verwalten!
-
-Ein weiterer, wesentlicher Vorteil ist der Zugriff auf andere nicht-Contao Pakete und Bibliotheken. Damit ist es möglich direkt auf Dritt-Software und Bibliotheken (bspw. die Symfony2 Komponenten) zurück zu greifen, ohne diese ständig selbst mitliefern zu müssen, was im ER2 aktuell notwendig ist. Das führt auch zu Komplikationen, wenn 2 Erweiterungen im ER2 die gleiche Drittanbieter Software, aber in unterschiedlichen Versionen verwenden möchten. Composer würde einen solchen Konflikt erkennen und die gleichzeitige Installation verweigern. Bei einem ER2 Paket würde es zu einem Fehlverhalten der Erweiterung führen.
-
-\textbf{Vorteile}
-\begin{dinglist}{'64}
-\item Großes Öko-System
-\item Dritt Erweiterungen und Bibliotheken in eigenen verwenden
-\item Zukunftssicher dank umfangreicher Community
-\item Abhängigkeitskonflikte zwischen Erweiterungen werden zuverlässig erkannt und vermieden.
-\item Einhörner ohne Feenstaub
-\end{dinglist}
 
 \newpage
 
