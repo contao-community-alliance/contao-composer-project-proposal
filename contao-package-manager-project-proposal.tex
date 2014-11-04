@@ -9,6 +9,18 @@ fontsize=10pt% Größe der Grundschrift
 
 \usepackage{cca-page} % design nach vorschrift
 
+\newcommand{\contaoPackageManagerProject}{\textbf{\texttt{Contao Paket Manager Projekt}}}
+\newcommand{\contaoPackageManager}{\textbf{\texttt{Contao Paket Manager}}}
+\newcommand{\packageManager}{\textbf{\texttt{Paket Manager}}}
+\newcommand{\moduleInstaller}{\textbf{\texttt{Module Installer}}}
+\newcommand{\store}{\textbf{\texttt{Extension Store}}}
+\newcommand{\jsonGenerator}{\textbf{\texttt{Composer.json Generator}}}
+\newcommand{\documentation}{\textbf{\texttt{Dokumentation}}}
+\newcommand{\databaseUpdateTool}{\textbf{\texttt{Database Update Tool}}}
+\newcommand{\migrationToolkit}{\textbf{\texttt{Migration Toolkit}}}
+\newcommand{\composerClient}{\textbf{\texttt{Composer Client}}}
+\newcommand{\composerPlugin}{\textbf{\texttt{Composer Plugin}}}
+
 \begin{document}
 
 \title{%
@@ -17,32 +29,13 @@ Contao Association\\
 Sonnhalderain 15\\
 CH - 3250 Lyss\\
 \href{http://c-c-a.org}{\includegraphics[width=.6\textwidth]{\logo}}\\
-Antrag auf Förderung des Contao Composer Projekts durch die Contao Association\\%
+Antrag auf Förderung des \\
+\textit{Contao Paket Manager Projekts} \\
+durch die Contao Association\\%
 }
 \date{24 Oktober 2014}
 \author{Contao-Community-Alliance}
 \maketitle
-
-\pagebreak
-
-% --------------------------------------------------------------------------------
-%
-%     Historie
-%
-% --------------------------------------------------------------------------------
-
-\section*{Historie}
-\label{sec:history}
-
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill} }llp{.7\textwidth}}
-\textbf{Version} & \textbf{Datum} & \textbf{Zusammenfassung} \\
-\hline
-1   & 24. Oktober 2014 & Erste Version, eingereicht am 24. Oktober 2014 an die Contao Association. \\
-\hline
-1.1 & -                & Korrektur diverser Rechtschreibfehler. \newline
-                         Hinzufügen von Yanick \uquot{Toflar} Witschi als Unterstützer. \newline
-                         Weitere Fußnoten eingefügt. \\
-\end{tabular*}
 
 \pagebreak
 
@@ -55,35 +48,36 @@ Antrag auf Förderung des Contao Composer Projekts durch die Contao Association\
 \section*{Präambel}
 \label{sec:preamble}
 
-Gefördert werden soll das Contao Composer Projekt, das durch die CCA betreut wird. \\
+Gefördert werden soll das \contaoPackageManagerProject{}, das durch die CCA betreut wird.
+
+\begin{emquotation}
+Ursprünglich hieß dieses Projekt \texttt{Contao Composer Projekt} und bestand aus den Projekten \composerClient{} (\texttt{contao-community-alliance/composer-client}) und dem \composerPlugin{} (\texttt{contao-community-alliance/composer-plugin}). Wegen der Benennung kam es oft zu Verwechselung mit dem Composer Projekt\footnote{\hreflink{https://getcomposer.org}} was zu viel Verwirrung geführt hat. In einer gemeinsamen Diskussion hat man beschlossen das Projekt um zu benennen\footref{fn:renaming} um hier eine klare Trennung zu schaffen.
+\end{emquotation}
+
 Das Projekt besteht aus mehreren Teilprojekten:
 
 \begin{itemize}
-\item ...dem Contao Composer Client (nachfolgend CCC benannt), \\
-dieser stellt die Integration von Composer in das Contao Backend zur Verfügung. \\
-Den meisten Nutzern dürfte der CCC als Menüpunkt \uquot{Paketverwaltung} bekannt sein.
-\item ...dem Contao Composer Plugin (nachfolgend CCP benannt), \\
-dieser stellt in Composer die Funktion zur Verfügung, Contao Erweiterungen über Composer zu installieren.
-\item ...dem Contao Composer Repository (nachfolgend CCR benannt), \\
+\item ...dem \packageManager{}, \\
+dabei handelt es sich um eine eigenständige Applikation - vergleichbar mit dem Install-Tool und Live-Update-Tool - um Contao, seine Pakete und Erweiterungen zu verwalten. \\
+Den meisten Nutzern dürfte der Vorgänger des \packageManager{}, der \composerClient{} als Menüpunkt \uquot{Paketverwaltung} bekannt sein.
+
+\item ...dem \moduleInstaller{}, \\
+dieser stellt in Composer die Funktion zur Verfügung, Contao Erweiterungen über Composer zu installieren. \\
+$ \ast $ Erweiterungen die exklusiv für Contao 4 oder neuer entwickelt werden benötigen den \moduleInstaller{} nicht mehr.
+
+\item ...dem \store{}, \\
 dies ist ein an das Contao Ökosystem angepasster Paketserver auf Basis von Packagist.
-\item ...dem Composer.json Generator (nachfolgend CJG benannt), \\
-hierbei handelt es sich um ein Web-Tool, dass den Entwicklern den Umstieg zu Composer erleichtern soll.
-\item ...der Contao Composer Dokumentation (nachfolgend CCD benannt).
+
+\item ...der \documentation{}.
 \end{itemize}
 
-Außerdem umfasst der Antrag folgende weitere Projekte, die unmittelbar mit dem Contao Composer Projekt zusammen hängen oder sogar als \uquot{Nebenprodukt} entstanden sind oder entstehen sollen.
-
-\begin{itemize}
-\item Database Update Tool (nachfolgend DUT benannt), \\
-ein eigenständiges Tool um das Datenbankupdate durchzuführen. In Contao ist das Datenbankupdate an das Install-Tool oder die Paketverwaltung gebunden. Das DUT soll das Datenbankupdate als eigenständige Komponente anbieten. Sowohl im Backend, als auch im CCC, so wie auf der Konsole!
-\item Migration Toolkit (nachfolgend MTK benannt), ist ein Tool, inspiriert von Doctrine Migrations\footnote{\hreflink{http://www.doctrine-project.org/projects/migrations.html}}, allerdings ist es allgemeiner gehalten und soll als Ersatz für die unspezifizierte \texttt{runone.php} dienen um in Zukunft fehlerhafte oder inkomplette Datenupgrades zu verhindern (bislang hat nur der Core eine \uquot{richtige} Datenmigration vornehmen können).
-\end{itemize}
+\pagebreak
 
 \subsection*{Welches Ziel hat dieser Antrag?}
 
-Bereits Anfang 2014\footnote{\hreflink{https://contao.org/de/news/zwischenmeldung-zum-extension-repository-3.html}} haben wir in einem klärenden Gespräch festgestellt, dass der CCC zwar schon funktioniert, aber es vor allem am Ökosystem hapert. Das vorhandene Ökosystem rund um das ER2 ist deutlich umfangreicher als das, was wir um den CCC bisher aufbauen konnten.
+Bereits Anfang 2014\footnote{\hreflink{https://contao.org/de/news/zwischenmeldung-zum-extension-repository-3.html}} haben wir in einem klärenden Gespräch festgestellt, dass der vorhandene \composerClient{} zwar funktioniert, aber es vor allem am Ökosystem hapert. Das vorhandene Ökosystem rund um das ER2 ist deutlich umfangreicher als das, was wir um den \composerClient{} bisher aufbauen konnten.
 
-Dieser Antrag befasst sich - soweit es aktuell planbar ist - damit, das Ökosystem rund um den CCC aufzubauen, so dass wir in absehbarer Zeit - 2015/2016 - das alte ER2 auch tatsächlich ablösen können.
+Dieser Antrag befasst sich - soweit es aktuell planbar ist - damit, das Ökosystem rund um den \contaoPackageManager{} aufzubauen, welcher aus dem \composerClient{} hervor geht. So dass wir in absehbarer Zeit - 2015/2016 - das alte ER2 auch tatsächlich ablösen können.
 
 Vor allem die \uquot{mangelnde} Usability, die in den Kommentaren des Newsbeitrags vom 20. März 2014 so oft angesprochen wurde möchten wir \uquot{aus dem Weg schaffen}.
 
@@ -97,8 +91,7 @@ Vor allem die \uquot{mangelnde} Usability, die in den Kommentaren des Newsbeitra
 %
 % --------------------------------------------------------------------------------
 
-\section[tl;dr - Zusammenfassung]{tl;dr - Zusammenfassung\footnote{Too long; didn't read -
-\hreflink{http://en.wikipedia.org/wiki/Wikipedia:Too\_long;\_didn't\_read}}}
+\section{Zusammenfassung}
 \label{sec:summary}
 
 \textit{Der Antrag ist dir zu lang? Hier findest du eine Zusammenfassung!}
@@ -274,6 +267,19 @@ Softwareentwickler seit über 13 Jahren, bei Contao seit über 5 Jahren, Entwick
 
 % --------------------------------------------------------------------------------
 %
+%     Subunternehmer
+%
+% --------------------------------------------------------------------------------
+
+\section{Subunternehmer}
+\label{sec:contractor}
+
+Es werden keine Subunternehmer beauftragt.
+
+\newpage
+
+% --------------------------------------------------------------------------------
+%
 %     Unterstützer
 %
 % --------------------------------------------------------------------------------
@@ -348,6 +354,25 @@ Das \uquot{Contao Composer Ökosystem} ist die logische Weiterentwicklung des be
 
 % --------------------------------------------------------------------------------
 %
+%     Projektteam
+%
+% --------------------------------------------------------------------------------
+
+\section{Projektteam}
+\label{sec:team}
+
+\begin{tabular}{ll}
+\textbf{Projektleitung}      & Tim Becker \\
+\textbf{Entwicklung}         & Christian Schiffler \\
+                             & Tristan Lins \\
+\textbf{Community Betreuung} & Marc Reimann \\
+                             & Nicky Hoff \\
+\end{tabular}
+
+\newpage
+
+% --------------------------------------------------------------------------------
+%
 %     Beschreibung
 %
 % --------------------------------------------------------------------------------
@@ -370,6 +395,7 @@ Die CCD soll sowohl für Entwickler, als auch Anwender und Anbieter kommerzielle
 Mit der CCD wurde bereits begonnen, man kann diese unter contao-composer-project.rtfd.org\footnote{\hreflink{http://contao-composer-project.rtfd.org}} einsehen.
 
 \pagebreak
+
 \subsection{Langfristige Ziele und Aufgaben}
 \label{sec:long-term-goals}
 
