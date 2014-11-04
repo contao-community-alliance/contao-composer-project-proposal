@@ -8,6 +8,7 @@ fontsize=10pt% Größe der Grundschrift
 %\def\logo{logos/colorlogo_cmyk}% Logo bei Profidruck.
 
 \usepackage{cca-page} % design nach vorschrift
+\usepackage{multirow}
 
 \newcommand{\contaoPackageManagerProject}{\textbf{\texttt{Contao Paket Manager Projekt}}}
 \newcommand{\contaoPackageManager}{\textbf{\texttt{Contao Paket Manager}}}
@@ -376,13 +377,38 @@ Das \uquot{Contao Composer Ökosystem} ist die logische Weiterentwicklung des be
 \section{Projektteam}
 \label{sec:team}
 
-\begin{tabular}{ll}
-\textbf{Projektleitung}      & Tim Becker \\
-\textbf{Entwicklung}         & Christian Schiffler \\
-                             & Tristan Lins \\
-\textbf{Community Betreuung} & Marc Reimann \\
-                             & Nicky Hoff \\
-\end{tabular}
+Das Projekt wird nicht nur durch die Antragsteller, sondern durch das Team der Contao Community Aliance betreut. Im folgenden sind die Tätigkeitsschwerpunkte der Mitglieder aufgelistet.
+
+\begin{tabularx}{\textwidth}{p{.2\textwidth}X}
+\multicolumn{2}{l}{\textbf{Projektleitung}} \\
+\hline
+\texttt{Tim Becker}          & Organisation und Abstimmung im Projekt. \\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{p{.2\textwidth}X}
+\multicolumn{2}{l}{\textbf{Entwicklung}} \\
+\hline
+\texttt{Christian Schiffler} & Entwicklung des Grundsystems. Integration in Contao. \\
+\texttt{Tristan Lins}        & Entwicklung des Grundsystems. Entwicklung der Oberfläche. \\
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{p{.2\textwidth}X}
+\multicolumn{2}{l}{\textbf{Kundenbetreuung}} \\
+\hline
+\texttt{Marc Reimann}        & Betreuung im deutschen Community Forum. \\
+\texttt{Nicky Hoff}          & Vorträge und Lehrveranstaltungen an der Konferenz und dem Camp. \\
+\end{tabularx}
+
+\begin{figure}[h]
+\begin{center}
+\href{http://c-c-a.org}{\includegraphics[width=.6\textwidth]{\logo}}
+\end{center}
+\begin{emquotation}
+Die Contao Community Alliance\footnotemark versteht sich als Vereinigung von freien Webschaffenden mit dem Fokus auf die Entwicklung nachhaltiger Lösungen für Contao.
+\end{emquotation}
+\end{figure}
+
+\footnotetext{{\hreflink{https://c-c-a.org}}}
 
 \newpage
 
