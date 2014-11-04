@@ -10,17 +10,17 @@ fontsize=10pt% Größe der Grundschrift
 \usepackage{cca-page} % design nach vorschrift
 \usepackage{multirow}
 
-\newcommand{\contaoPackageManagerProject}{\textbf{\texttt{Contao Paket Manager Projekt}}}
-\newcommand{\contaoPackageManager}{\textbf{\texttt{Contao Paket Manager}}}
-\newcommand{\packageManager}{\textbf{\texttt{Paket Manager}}}
-\newcommand{\moduleInstaller}{\textbf{\texttt{Module Installer}}}
-\newcommand{\store}{\textbf{\texttt{Extension Store}}}
-\newcommand{\jsonGenerator}{\textbf{\texttt{Composer.json Generator}}}
-\newcommand{\documentation}{\textbf{\texttt{Dokumentation}}}
-\newcommand{\databaseUpdateTool}{\textbf{\texttt{Database Update Tool}}}
-\newcommand{\migrationToolkit}{\textbf{\texttt{Migration Toolkit}}}
-\newcommand{\composerClient}{\textbf{\texttt{Composer Client}}}
-\newcommand{\composerPlugin}{\textbf{\texttt{Composer Plugin}}}
+\newcommand{\contaoPackageManagerProject}{\textbf{\textit{Contao Paket Manager Projekt}}}
+\newcommand{\contaoPackageManager}{\textbf{\textit{Contao Paket Manager}}}
+\newcommand{\packageManager}{\textbf{\textit{Paket Manager}}}
+\newcommand{\moduleInstaller}{\textbf{\textit{Module Installer}}}
+\newcommand{\store}{\textbf{\textit{Extension Store}}}
+\newcommand{\jsonGenerator}{\textbf{\textit{Composer.json Generator}}}
+\newcommand{\documentation}{\textbf{\textit{Dokumentation}}}
+\newcommand{\databaseUpdateTool}{\textbf{\textit{Database Update Tool}}}
+\newcommand{\migrationToolkit}{\textbf{\textit{Migration Toolkit}}}
+\newcommand{\composerClient}{\textbf{\textit{Composer Client}}}
+\newcommand{\composerPlugin}{\textbf{\textit{Composer Plugin}}}
 
 \begin{document}
 
@@ -29,7 +29,11 @@ An die:\\
 Contao Association\\
 Sonnhalderain 15\\
 CH - 3250 Lyss\\
-\href{http://c-c-a.org}{\includegraphics[width=.6\textwidth]{\logo}}\\
+\vspace*{1cm}%
+\href{https://bit3.de}{\includegraphics[width=.2\textwidth]{bilder/bit3}}%
+\hspace*{1cm}%
+\href{https://www.cyberspectrum.de/}{\includegraphics[width=.2\textwidth]{bilder/cyberspectrum}}%
+\vspace*{1cm}\\
 Antrag auf Förderung des \\
 \textit{Contao Paket Manager Projekts} \\
 durch die Contao Association\\%
@@ -52,7 +56,7 @@ durch die Contao Association\\%
 Gefördert werden soll das \contaoPackageManagerProject{}, das durch die Contao Community Alliance betreut wird.
 
 \begin{emquotation}
-Ursprünglich hieß dieses Projekt \textbf{\texttt{Contao Composer Projekt}} und bestand aus den Teilprojekten \composerClient{} (\texttt{contao-community-alliance/composer-client}) und dem \composerPlugin{} (\texttt{contao-community-alliance/composer-plugin}). Wegen der Benennung kam es oft zu Verwechselung mit dem \texttt{PHP Composer Projekt}\footnote{\hreflink{https://getcomposer.org}} was zu viel Verwirrung geführt hat. In einer gemeinsamen Diskussion hat man beschlossen das Projekt um zu benennen\footnotemark um hier eine klare Trennung zu schaffen.
+Ursprünglich hieß dieses Projekt \textbf{\textit{Contao Composer Projekt}} und bestand aus den Teilprojekten \composerClient{} (\texttt{contao-community-alliance/composer-client}) und dem \composerPlugin{} (\texttt{contao-community-alliance/composer-plugin}). Wegen der Benennung kam es oft zu Verwechselung mit dem \textit{PHP Composer Projekt}\footnote{\hreflink{https://getcomposer.org}} was zu viel Verwirrung geführt hat. In einer gemeinsamen Diskussion hat man beschlossen das Projekt um zu benennen\footnotemark um hier eine klare Trennung zu schaffen.
 \end{emquotation}
 
 \footnotetext{\hreflink{https://github.com/contao-community-alliance/composer-client/issues/235}}
@@ -61,15 +65,11 @@ Das Projekt besteht aus mehreren Teilprojekten:
 
 \begin{itemize}
 \item ...dem \packageManager{}, \\
-dabei handelt es sich um eine eigenständige Applikation - vergleichbar mit dem Install-Tool und Live-Update-Tool - um Contao, seine Pakete und Erweiterungen zu verwalten. \\
+dabei handelt es sich um eine eigenständige Applikation um die in Contao installierten Erweiterungen auf einfache Art und Weise zu verwalten. \\
 Den meisten Nutzern dürfte der Vorgänger des \packageManager{}, der \composerClient{} als Menüpunkt \uquot{Paketverwaltung} bekannt sein.
 
-\item ...dem \moduleInstaller{}, \\
-dieser stellt in Composer die Funktion zur Verfügung, Contao Erweiterungen über Composer zu installieren. \\
-$ \ast $ Erweiterungen die exklusiv für Contao 4 oder neuer entwickelt werden benötigen den \moduleInstaller{} nicht mehr.
-
 \item ...dem \store{}, \\
-dies ist ein an das Contao Ökosystem angepasster Paketserver auf Basis von Packagist.
+dies ist ein an das Contao Ökosystem angepasster Paketserver. Die Benennung lässt vermuten, dass es sich dabei um einen Onlineshop handelt. Dies ist auch das langfristige Ziel, daraus eine Vermarktungsplatform für freie und kommerzielle Erweiterungen zu schaffen - ähnlich dem Theme-Store. Diese Funktionalität ist aber nicht Teil dieses Antrags!
 
 \item ...der \documentation{}.
 \end{itemize}
@@ -109,17 +109,13 @@ Leider führt das des öfteren immer wieder zu Verwirrung. \\
 Unter dem Begriff \textbf{Contao Composer Projekt} - umgangssprachlich auch als \textbf{Composer Projekt} abgekürzt - vereinen wir alle zugehörigen Teilprojekte (siehe \nameref{sec:preamble}).
 \end{info}
 
-\subsection{Was ist aus dem ER3 geworden?}
-
-Das ER3, auch bekannt als RFCCC-1\footnote{\hreflink{https://c-c-a.org/rfccc1}} war ein Vorstoß aus 2011 um den Weg für einen neuen Erweiterungskatalog zu ebnen, im gleichen Jahr hat Composer das Licht der Welt erblickt. Im Jahr 2012 hatte Composer dann seinen großen Aufschwung und wir hatten neugierige Blicke auf dieses aufstrebende Projekt geworfen. Anfang 2013 entstand dann die erste Integration von Composer für Contao.
+Deshalb wurde beschlossen, das Projekt allgemein in \contaoPackageManagerProject{} um zu benennen. Unter der Haube setzen wir immer noch Composer sein. Auch wenn Composer nicht ganz unstrittig ist, ist es doch Alternativlos und für uns aktuell die beste Möglichkeit schnell zum Ziel zu kommen.
 
 \begin{emquote}{Christian Schiffler, Tristan Lins}
-Als wir den RFCCC-1 (ER3 Dokumentation) schrieben, haben wir festgestellt dass die ganze Thematik \uquot{Paketverwaltung und Abhängigkeitsmanagement} technisch deutlich komplexer ist, als es auf den ersten Blick den Eindruck macht. Nils und Jordi haben hier eine großartige Vorarbeit geleistet, viele Stunden investiert und obendrein eine große Anzahl an Mitstreitern um sich geschart die regelmäßig dazu beitragen, Composer zu verbessern - wir gehören auch dazu. Composer mag durchaus auch seine Schwächen haben - bspw. relativ hohe Systemanforderungen - aber wir könnten es auch nicht besser machen, besonders nicht bei gleicher Funktionalität.
+Als wir uns mit der Thematik Thematik \uquot{Paketverwaltung und Abhängigkeitsmanagement} beschäftigten, haben wir festgestellt dass die ganze technisch deutlich komplexer ist, als es auf den ersten Blick den Eindruck macht. Nils und Jordi haben hier eine großartige Vorarbeit geleistet, viele Stunden investiert und obendrein eine große Anzahl an Mitstreitern um sich geschart die regelmäßig dazu beitragen, Composer zu verbessern - wir gehören auch dazu. Composer mag durchaus auch seine Schwächen haben - bspw. relativ hohe Systemanforderungen - aber wir könnten es auch nicht besser machen, besonders nicht bei gleicher Funktionalität.
 \end{emquote}
 
-Für uns war, ist und bleibt Composer aktuell die beste Grundlage die wir nutzen können. Das ER3 ist also nicht gestorben, viel mehr haben wir mit Composer die Grundlage zur Hand, um das ER3 in erschwinglicher Zeit und akzeptablen finanziellen Aufwand darauf aufzubauen.
-
-Schon heute wird der Contao Composer Client in immer mehr Installationen eingesetzt (>15.000 Downloads\footnote{\hreflink{https://c-c-a.org/composer-counter}}). Einige Erweiterungen die bereits über Composer vertrieben werden, werden im ER2 nur noch sporadisch aktualisiert. Andere Erweiterungen sind gar nicht mehr im ER2 verfügbar. Die bekanntesten Vertreter sind vermutlich Avisota und MetaModels, aber auch einige andere Erweiterungen die nicht aus der Hand der Antragsteller stammen, sind nur noch über Composer verfügbar! Bspw. die Contao Bootstrap Erweiterung\footnote{\hreflink{https://packagist.org/packages/contao-bootstrap/}} von David Molineus.
+Schon heute wird der \composerClient{} in immer mehr Installationen eingesetzt (>15.000 Downloads\footnote{\hreflink{https://c-c-a.org/composer-counter}}). Einige Erweiterungen die bereits über Composer vertrieben werden, werden im ER2 nur noch sporadisch aktualisiert. Andere Erweiterungen sind gar nicht mehr im ER2 verfügbar. Die bekanntesten Vertreter sind vermutlich Avisota und MetaModels, aber auch einige andere Erweiterungen die nicht aus der Hand der Antragsteller stammen, sind nur noch über Composer verfügbar! Bspw. die Contao Bootstrap Erweiterung\footnote{\hreflink{https://packagist.org/packages/contao-bootstrap/}} von David Molineus.
 
 \newpage
 
@@ -161,7 +157,7 @@ Sollte es dennoch zu Problemen kommen - den auch Composer kann uns nicht vor all
 
 Ein weiterer Punkt ist die Veröffentlichung von neuen Versionen. Für Entwickler ist dies aktuell relativ zeitaufwendig, abgesehen vom \uquot{taggen}\footnote{Damit bezeichnet man das Markieren einer Version zu einem gewissen Stand des Quellcodes.} der Version müssen Entwickler die neue Version auch noch auf der Contao Website eintragen, von Hand hochladen\footnote{Es gibt zwar mitlerweile einen github Import, der aber nicht in jeder Situation funktioniert.} und dann auch noch veröffentlichen. Composer und Packagist\footnote{\href{https://packagist.org}{Packagist.org} ist der offizielle Paketserver zu Composer.} automatisieren den Prozess nach dem \uquot{taggen} vollständig. Das macht es Entwicklern einfacher, gerade Bugfixes schnell und unkompliziert zu veröffentlichen - Stichwort: Semantische Versionierung\footref{fn:semver}.
 
-Zu guter Letzt haben wir mit dem ER2 noch ein großes Problem, was den wenigsten bekannt ist. Das ER2 wurde ursprünglich exklusiv für Contao entwickelt und unterliegt einer proprietären Lizenz, die ausschließlich die Nutzung auf contao.org gestattet. Das bedeutet, es ist unmöglich das ER2 - oder zumindest den Server - weiter zu entwickeln, denn Leo Feyer darf den Quellcode des ER2 Servers nicht veröffentlichen. Mit Composer setzen wir auf Open Source Software, die wir an unsere Bedürfnisse anpassen können, wenn es notwendig wird.
+Zu guter Letzt haben wir mit dem ER2 noch ein großes Problem, was den wenigsten bekannt ist. Das ER2 wurde ursprünglich exklusiv für Contao entwickelt und ist technisch stark veraltet. Keiner der Contao Entwickler mag sich an diesen \uquot{Dinosaurier} dran begeben, was dazu führt dass die Weiterentwicklung des ER2 gänzlich zum erliegen gekommen ist. Mit Composer setzen wir auf Open Source Software, die technisch auf dem neuesten Stand ist und die wir an unsere Bedürfnisse anpassen können, wenn es notwendig wird.
 
 \newpage
 
@@ -195,7 +191,7 @@ Die große Community sorgt außerdem dafür, dass Composer und sein Ökosystem s
 Veröffentlichen von neuen Versionen wird mittels Composer so einfach wie nie zuvor, denn die Erweiterungen können dort belassen werden, wo sie heutzutage eh meist schon sind: Auf github, bitbucket oder einem anderen Anbieter. Einzige Bedingung dabei ist, dass der Quellcode öffentlich erreichbar ist. Im Gegensatz zum ER2, wo jede Version einzeln von Hand auf dem ER2 Server gepflegt werden muss, reicht bei Composer ein einmaliges Registrieren auf dem Paketserver (bspw. packagist.org). Neue Versionen werden ausschließlich durch setzen von Tags\footnote{Markierung eines exakten Standes der Entwicklung unter einem Namen, oftmals eine Versionsnummer in der Art von 1.0.0} im VCS System erzeugt. Da für gewöhnlich diese Tags von Entwicklern ohnehin gesetzt werden, fällt die ganze Verwaltung der Versionen auf dem Paketserver weg. Man kann also mit Recht behaupten: Es fällt Arbeit weg und kommt keine neue Arbeit hinzu, um die einzelnen Versionen zu verwalten!
 
 \begin{info}
-* Für Anbieter kommerzieller Erweiterungen gibt es die Möglichkeit - über private Satis Repositories und Artifact Pakete - den eigenen Code vor fremden Zugriffen zu schützen und trotzdem die Erweiterung über Composer zu verteilen. Diese Möglichkeiten werden im Rahmen der Dokumentation genau erklärt. Außerdem soll es langfristig einen \uquot{App Store} geben um kostenpflichtige Erweiterung über eine zentrale Plattform zu vermarkten und zu verteilen, siehe \nameref{sec:long-term-goals}.
+* Für Anbieter kommerzieller Erweiterungen gibt es die Möglichkeit - über private Satis Repositories und Artifact Pakete - den eigenen Code vor fremden Zugriffen zu schützen und trotzdem die Erweiterung über Composer zu verteilen. Diese Möglichkeiten werden im Rahmen der Dokumentation genau erklärt. Außerdem soll es langfristig im \store{} die Möglichkeit geben, kostenpflichtige Erweiterung zu vermarkten und zu verteilen.
 \end{info}
 
 \newpage
@@ -217,7 +213,6 @@ Veröffentlichen von neuen Versionen wird mittels Composer so einfach wie nie zu
   \includegraphics[width=.2\textwidth]{bilder/cyberspectrum}
 \end{wrapfigure}
 
-Primärer Maintainer des CCP \\
 Unternehmen: CyberSpectrum (\href{https://www.cyberspectrum.de}{www.cyberspectrum.de}) \\
 E-Mail: \href{mailto:c.schiffler@cyberspectrum.de}{c.schiffler@cyberspectrum.de}
 
@@ -231,7 +226,6 @@ Softwareentwickler seit über 21 Jahren, bei Contao seit über 6 Jahren, Entwick
   \includegraphics[width=.2\textwidth]{bilder/bit3}
 \end{wrapfigure}
 
-Primärer Maintainer des CCC \\
 Unternehmen: bit3 UG (\href{https://bit3.de}{bit3.de}) \\
 E-Mail: \href{mailto:tristan.lins@bit3.de}{tristan.lins@bit3.de}
 
@@ -335,7 +329,7 @@ Mitglied in der Contao Association und Contao Community Alliance \\
 E-Mail: \href{mailto:tim@westwerk.ac}{tim@westwerk.ac}
 
 \begin{emquote}{}
-Das \contaoPackageManagerProject{} ist die logische Weiterentwicklung des beliebten ER2 - um die aktuell vorhandenen Defizite auszumerzen und die vorhandene Implementierung (der \composerClient{}) auf noch stabilere Beine zu stellen unterstütze ich die forcierte Weiterentwicklung natürlich.
+Das \contaoPackageManagerProject{} ist die logische Weiterentwicklung des beliebten ER2 - um die aktuell vorhandenen Defizite auszumerzen und die vorhandene Implementierung auf noch stabilere Beine zu stellen unterstütze ich die forcierte Weiterentwicklung natürlich.
 \end{emquote}
 
 \newpage
@@ -354,26 +348,26 @@ Das Projekt wird nicht nur durch die Antragsteller, sondern durch das Team der C
 \begin{tabularx}{\textwidth}{p{.2\textwidth}X}
 \multicolumn{2}{l}{\textbf{Projektleitung}} \\
 \hline
-\texttt{Tim Becker}          & Organisation und Abstimmung im Projekt. \\
+Tim Becker          & Organisation und Abstimmung im Projekt. \\
 \end{tabularx}
 
 \begin{tabularx}{\textwidth}{p{.2\textwidth}X}
 \multicolumn{2}{l}{\textbf{Entwicklung}} \\
 \hline
-\texttt{Christian Schiffler} & Entwicklung des Grundsystems. \newline
-                               Integration in Contao. \newline
-                               Administration und Betreuung \store{}. \\
-\texttt{Tristan Lins}        & Entwicklung des Grundsystems. \newline
-                               Entwicklung der Oberfläche. \newline
-                               Schreiben der \documentation{}.
+Christian Schiffler & Entwicklung des \packageManager{}, \newline
+                      Schwerpunkt: Integration in Contao. \newline
+                      Administration und Betreuung \store{}. \\
+Tristan Lins        & Entwicklung des \packageManager{}, \newline
+                      Schwerpunkt: Oberflächendesign und Bedienbarkeit. \newline
+                      Schreiben der \documentation{}.
 \end{tabularx}
 
 \begin{tabularx}{\textwidth}{p{.2\textwidth}X}
 \multicolumn{2}{l}{\textbf{Kundenbetreuung}} \\
 \hline
-\texttt{Marc Reimann}        & Betreuung im deutschen Community Forum. \\
-\texttt{Nicky Hoff}          & Vorträge und Lehrveranstaltungen an der Konferenz und dem Camp. \newline
-                               Lektorat der \documentation{}. \\
+Marc Reimann        & Betreuung im deutschen Community Forum. \\
+Nicky Hoff          & Vorträge und Lehrveranstaltungen an der Konferenz und dem Camp. \newline
+                      Lektorat der \documentation{}. \\
 \end{tabularx}
 
 \begin{figure}[h]
@@ -400,55 +394,37 @@ Die Contao Community Alliance\footnotemark versteht sich als Vereinigung von fre
 
 \subsection{Zielsetzung}
 
-Aktuell ist die Bedienbarkeit des CCC vor allem technisch orientiert, das liegt vor allem daran, dass die jetzige Version \uquot{von Entwicklern für Entwickler} entwickelt wurde. Ziel ist es die Bedienbarkeit dahingehend deutlich zu verbessern, dass technisch weniger versierte Benutzer keine Probleme mehr haben sollten, den CCC zu bedienen (Usability).
+Der \packageManager{} soll aus dem bestehenden \composerClient{} entstehen.
 
-Der CCC ist momentan vom Contao Backend abhängig, was vor allem bei einem fehlgeschlagenen Update oft zu Problemen führt, weil man nicht mehr in der Lage ist die Paketverwaltung zu öffnen. Es soll daher die bisherig geleistete Arbeit heran gezogen werden und anstelle der Backend Integration einen eigenständigen Modus geben, der ohne das Backend funktioniert und mit dem man ein beschädigtes System wieder reparieren kann. Dieser \textit{Standalone Modus} wird - ähnlich wie das Contao-Live-Update\footnote{\hreflink{https://contao.org/de/manual/3.3/installation.html\#live-update-service}} - über eine PHAR Datei realisiert.
+Der \packageManager{} soll das zentrale Paketverwaltungstool für Contao 3.5 LTS und Contao 4.0 und folgende Versionen werden.
 
-Das CCP beinhaltet aktuell Funktionalitäten, die dort einfach nicht rein gehören. Dazu gehören unter anderem die Migrationsroutinen bei Updates. Diese Funktionen sollen in den CCC einfließen und der CCP soll damit so verschlankt werden, dass er auch mit zukünftige Contao Versionen kompatibel ist und bleibt. Das betrifft bspw. die anstehende Contao 4 Version, in der sich die Strukturen ändern und dort einige der vorhandenen Migrationsroutinen im CCP aktuell noch zu Fehlern führen.
+\begin{danger}
+\textbf{Hinweis} Das ER2 - im Backend unter den Menüpunkten \uquot{Erweiterungskatalog} und \uquot{Erweiterungsverwaltung} bekannt - kann mit Contao 4 nicht mehr eingesetzt werden!
+\end{danger}
 
-Das CCR in Form einer eigenständigen Packagist Installation soll aufgesetzt und für Contao gebrandet werden. Damit wollen wir verhindern, dass Entwickler die jetzt auf Composer umsteigen, nicht noch einen zweiten Umstieg von Packagist.org auf den neuen Contao Paketserver durchführen müssen. In der ersten Form wird der CCR lediglich ein Standard Packagist Server sein. Für 2015 ist ein Förderantrag zur Erweiterung dieses Paketservers geplant, um ihn an die Anforderungen im Contao Umfeld anzupassen.
-
-Die CCD soll sowohl für Entwickler, als auch Anwender und Anbieter kommerzieller Pakete ausgearbeitet werden. Momentan ist die Dokumentation auch noch über viele Quellen verteilt (CCA Website, Contao Wiki, Github Wiki) und soll zentralisiert werden. Die Dokumentation wird in reStructuredText/Sphinx\footnote{\hreflink{http://sphinx-doc.org/}} geschrieben und über Read the Docs\footnote{\hreflink{https://readthedocs.org/}} publiziert. Die Übersetzung erfolgt dann über Transifex\footnote{\hreflink{https://www.transifex.com/}}.
-
-Mit der CCD wurde bereits begonnen, man kann diese unter contao-composer-project.rtfd.org\footnote{\hreflink{http://contao-composer-project.rtfd.org}} einsehen.
-
-\pagebreak
-
-\subsection{Langfristige Ziele und Aufgaben}
-\label{sec:long-term-goals}
-
-Die Entwicklungen umfasst nicht nur die nächsten Schritte. In den kommenden Jahren wollen wir weitere Projekte angehen, um das Ökosystem rund um die Contao Paketverwaltung neu aufzubauen.
-
-\subsubsection{Einführung eines erweiterten Packagist Servers für Contao Erweiterungen (=CCR)}
-
-Packagist\footnote{\hreflink{https://packagist.org}} ist der Paketserver zu Composer. Allerdings sind die Möglichkeiten im Vergleich zum aktuellen ER2\footnote{\hreflink{https://contao.org/de/extension-list.html}} doch sehr eingeschränkt. Bspw. die Suche und Filtermöglichkeiten sind momentan noch nicht sonderlich ausgereift. Im Rahmen des CCR möchten wir einen eigenen Paketserver auf Basis von Packagist aufsetzen, diesen entsprechend Branden und auf unsere Bedürfnisse anpassen.\\
-Dabei werden wir auch darauf achten, dass wir uns nicht zu sehr von der Originalsoftware entfernen und werden einige Änderungen auch an das Packagist Projekt zurück geben. Daraus erhoffen wir uns einen stärkeren Synergieeffekt. Änderungen die speziell an das Contao Umfeld zugeschnitten werden, verbleiben im CCR und werden nicht an das Packagist Projekt zurück gegeben.
-
-\subsubsection{Erweitern des CCR in einen \uquot{App Store}}
-
-Mit dem aktuellen ER2 ist es möglich kommerzielle Erweiterung zu verbreiten. Allerdings fehlt es an entsprechenden Vermarktungsmöglichkeiten. Diese möchten wir - so ähnlich wie der Contao Theme Store - zukünftig ermöglichen.
-
-\subsubsection{Langfristige Finanzierung}
-
-\paragraph{Serverbetrieb und Administration des CCR} ~\\
-Das CCR wird auf dem Community Server der Association betrieben. Falls es auf Dauer notwendig werden sollte, wird die Association einen separaten Server zur Verfügung stellen. Dies ist bereits mit dem Association Vorstand kommuniziert worden.
-Die Pflege des Servers wird primär von den zuständigen Serveradministratoren durchgeführt. Die spezifische Administration der Software wird unentgeltlich von Tristan Lins und Christian Schiffler übernommen, solange sich der Aufwand in einem wirtschaftlichen akzeptablen Rahmen bewegt.
-
-\paragraph{Weiterentwicklung und Pflege des CCC+CCP} ~\\
-Für die nächsten Jahre soll die Weiterentwicklung und Pflege primär durch die Contao Association im Rahmen dieses Antrags gefördert werden. Wie die finanzielle Absicherung danach aussieht steht noch nicht genau fest.\\
-Bereits bei der Association Mitgliederversammlung 2014 waren im Haushalt Gelder für das Composer Projekt vorgesehen, die dann aber dem Topf zur Mittelverwendung zugeführt wurden. Dass nach Umsetzung dieses Antrags möglicherweise wieder Gelder im Haushalt der Association eingeplant und bereitgestellt werden wäre eine denkbare Lösung.
+Der \store{} soll die zentrale Stelle Platform zum vermarkten, bewerben und verbreiten von Contao Erweiterungen werden.
 
 \subsection{Begründung: \uquot{Wie wird Contao durch das Projekt gefördert}}
 
-Contao und die Contao Community profitieren, da Entwickler schneller Updates bereitstellen können und die Updates sich sicherer und schneller installieren lassen. Die Installation inkompatibler Erweiterungen ist damit nicht mehr möglich und somit sinkt die Rate an \uquot{zerstörten} Contao Installation drastisch.
+Das aktuelle ER2 ist mit Contao 4.0 aufgrund der technischen Umstellungen nicht mehr Einsatzfähig. Contao 4.0 nutzt selbst Composer und der \packageManager{} wird die einzige Möglichkeit sein, Pakete und Erweiterungen in Contao 4.0 bequem über eine Oberfläche zu verwalten.
 
-Bereits seit über 2 Jahren wird darüber nachgedacht, das in die Jahre gekommene ER2 zu ersetzen. Durch Composer haben wir nun die Möglichkeit das ER3 endlich realisieren, wodurch Entwicklern und damit auch Contao neue Möglichkeiten zur Verfügung stehen.
+\pagebreak
 
 \subsection{Lizenzen}
 
-Der CCC und das CCP stehen unter der LGPL-3.0 Lizenz.\\
-Das CCR steht unter der MIT Lizenz. \\
-Die CCD steht unter der CC-BY-NC-SA 3.0 Unported Lizenz.
+Der \packageManager{} stehen unter der LGPL-3.0 Lizenz.\\
+Das \store{} steht unter der MIT Lizenz. \\
+Die \documentation{} steht unter der CC-BY-NC-SA 3.0 Unported Lizenz.
+
+\subsection{Systemvoraussetzungen}
+
+Die Systemvoraussetzungen um den \packageManager{} einsetzen zu können.
+
+\begin{dinglist}{'64}
+\item PHP 5.4 oder neuer
+\item PHAR Support
+\item Contao 3.5 LTS oder Contao 4.0 oder neuer
+\end{dinglist}
 
 \newpage
 
@@ -461,19 +437,13 @@ Die CCD steht unter der CC-BY-NC-SA 3.0 Unported Lizenz.
 \section{Angebot}
 \label{sec:offer}
 
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill} }p{.8\textwidth}r}
-\textbf{Position} & \textbf{Preis} \\
-\hline
+\begin{dinglist}{'64}
+\item Implementierung des \contaoPackageManager{} für Contao 3.5 LTS und Contao 4.0.
+\item Schreiben der Dokumentation zum \contaoPackageManagerProject{} für Anwender, Kommerzielle Anbieter und Entwickler
+\item Aufsetzen des \store{} und Branding für Contao.
+\end{dinglist}
 
-Implementierung des \contaoPackageManager{} für Contao 3.5 LTS und Contao 4.0. \newline
-Schreiben der Dokumentation zum \contaoPackageManagerProject{} für \newline
-\tabitem Anwender, \newline
-\tabitem Kommerzielle Anbieter und \newline
-\tabitem Entwickler \newline
-Aufsetzen des \store{} und Branding für Contao
-
-& \textbf{10.000 \euro}
-\end{tabular*}
+\hfill Summe: \textbf{10.000 \euro}
 
 % --------------------------------------------------------------------------------
 %
